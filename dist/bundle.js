@@ -60601,22 +60601,22 @@ var state = {
   },
   gallery: {
     title: "Showcasing our work",
-    activeAlbum: 72157694152735684,
+    activeAlbum: "72157694152735684",
     albums: [{
       name: "Bathrooms",
-      albumId: 72157665060259447
+      albumId: "72157665060259447"
     }, {
       name: "Basements",
-      albumId: 72157667100192078
+      albumId: "72157667100192078"
     }, {
       name: "Kitchens",
-      albumId: 72157665060525757
+      albumId: "72157665060525757"
     }, {
       name: "Wood Work",
-      albumId: 72157694152735684
+      albumId: "72157694152735684"
     }, {
       name: "Exterior",
-      albumId: 72157665060914627
+      albumId: "72157665060914627"
     }]
   },
   financing: {
@@ -60836,6 +60836,7 @@ var GalleryPage = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (GalleryPage.__proto__ || Object.getPrototypeOf(GalleryPage)).call(this, props));
 
     _this.state = {
+      loading: true,
       activePhoto: 0,
       isOpen: false,
       photos: []
@@ -60864,6 +60865,7 @@ var GalleryPage = function (_React$Component) {
     };
     _this.handleAlbumChange = function (albumId) {
       return function (e) {
+        if (_this.state.loading) return;
         _this.props.handleAlbumChange(albumId);
       };
     };
@@ -60888,6 +60890,24 @@ var GalleryPage = function (_React$Component) {
       });
     }
   }, {
+    key: 'loadPhotos',
+    value: function loadPhotos(albumId) {
+      var _this2 = this;
+
+      this.setState({ loading: true });
+      this.fetchPhotos(albumId).then(function (album) {
+        var photos = album.photoset.photo.map(function (photo) {
+          return {
+            src: _this2.createImageUrl(photo),
+            alt: photo.title
+          };
+        });
+        _this2.setState(function (state) {
+          return { photos: photos, loading: false };
+        });
+      });
+    }
+  }, {
     key: 'createImageUrl',
     value: function createImageUrl(_ref) {
       var farm = _ref.farm,
@@ -60900,19 +60920,14 @@ var GalleryPage = function (_React$Component) {
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var _this2 = this;
-
-      this.fetchPhotos(this.props.activeAlbum).then(function (album) {
-        var photos = album.photoset.photo.map(function (photo) {
-          return {
-            src: _this2.createImageUrl(photo),
-            alt: photo.title
-          };
-        });
-        _this2.setState(function (state) {
-          return { photos: photos };
-        });
-      });
+      this.loadPhotos(this.props.activeAlbum);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.activeAlbum !== this.props.activeAlbum) {
+        this.loadPhotos(nextProps.activeAlbum);
+      }
     }
   }, {
     key: 'render',
@@ -60922,7 +60937,8 @@ var GalleryPage = function (_React$Component) {
       var _state = this.state,
           activePhoto = _state.activePhoto,
           isOpen = _state.isOpen,
-          photos = _state.photos;
+          photos = _state.photos,
+          loading = _state.loading;
       var _props = this.props,
           albums = _props.albums,
           activeAlbum = _props.activeAlbum;
