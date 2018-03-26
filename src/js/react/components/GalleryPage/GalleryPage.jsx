@@ -9,6 +9,7 @@ class GalleryPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: true,
       activePhoto: 0,
       isOpen: false,
       photos: []
@@ -32,14 +33,14 @@ class GalleryPage extends React.Component {
       ));
     };
     this.handleAlbumChange = (albumId) => (e) => {
+      if (this.state.loading) return;
       this.props.handleAlbumChange(albumId);
     };
   }
 
-  fetchPhotos(id) {
+  fetchPhotos(albumId) {
     return (new Promise((res, rej) => {
-      const albumId = 72157665060259447;
-      const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${API_KEY}&photoset_id=${id}&format=json&nojsoncallback=1`;
+      const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${API_KEY}&photoset_id=${albumId}&format=json&nojsoncallback=1`;
       const xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -53,13 +54,14 @@ class GalleryPage extends React.Component {
     }));
   }
 
-  loadPhotos(id) {
-    this.fetchPhotos(id).then(album => {
+  loadPhotos(albumId) {
+    this.setState({loading: true})
+    this.fetchPhotos(albumId).then(album => {
       const photos = album.photoset.photo.map(photo => ({
         src: this.createImageUrl(photo),
         alt: photo.title
       }));
-      this.setState(state => ({photos}));
+      this.setState(state => ({photos, loading: false}));
     });
   }
 
@@ -79,7 +81,7 @@ class GalleryPage extends React.Component {
 
   render() {
 
-    const { activePhoto, isOpen, photos } = this.state;
+    const { activePhoto, isOpen, photos, loading } = this.state;
     const {albums, activeAlbum} = this.props;
 
     return (
