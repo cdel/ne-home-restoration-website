@@ -36,9 +36,10 @@ class GalleryPage extends React.Component {
     };
   }
 
-  fetchPhotos(albumId) {
+  fetchPhotos(id) {
     return (new Promise((res, rej) => {
-      const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${API_KEY}&photoset_id=${albumId}&format=json&nojsoncallback=1`;
+      const albumId = 72157665060259447;
+      const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${API_KEY}&photoset_id=${id}&format=json&nojsoncallback=1`;
       const xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -52,8 +53,8 @@ class GalleryPage extends React.Component {
     }));
   }
 
-  loadPhotos(albumId) {
-    this.fetchPhotos(albumId).then(album => {
+  loadPhotos(id) {
+    this.fetchPhotos(id).then(album => {
       const photos = album.photoset.photo.map(photo => ({
         src: this.createImageUrl(photo),
         alt: photo.title

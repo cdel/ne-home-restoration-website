@@ -53,27 +53,27 @@ const state = {
   },
   gallery: {
     title: "Showcasing our work",
-    activeAlbum: 72157694152735684,
+    activeAlbum: "72157694152735684",
     albums: [
       {
         name: "Bathrooms",
-        albumId: 72157665060259447
+        albumId: "72157665060259447"
       },
       {
         name: "Basements",
-        albumId: 72157667100192078
+        albumId: "72157667100192078"
       },
       {
         name: "Kitchens",
-        albumId: 72157665060525757
+        albumId: "72157665060525757"
       },
       {
         name: "Wood Work",
-        albumId: 72157694152735684
+        albumId: "72157694152735684"
       },
       {
         name: "Exterior",
-        albumId: 72157665060914627
+        albumId: "72157665060914627"
       }
     ]
   },
