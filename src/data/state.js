@@ -53,9 +53,9 @@ const state = {
   },
   gallery: {
     title: "Showcasing our work",
-    kitchens: [],
-    basements: [],
-    bathrooms: []
+    kitchens: "",
+    basements: "",
+    bathrooms: "72157665060259447"
   },
   financing: {
     title: "Financing Available",
