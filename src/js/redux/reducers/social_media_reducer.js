@@ -1,5 +1,5 @@
-function social_media_reducer(state = {}, action) {
+function social_media(state = {}, action) {
   return state;
 }
 
-export default social_media_reducer;
+export default social_media;

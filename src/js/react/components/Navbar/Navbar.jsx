@@ -12,10 +12,10 @@ const NavigationBar = (props) => {
       </div>
       <Navbar>
         <Link to="/">
-          Active
+          Home
         </Link>
-        <Link to="/completed">
-          Completed
+        <Link to="/gallery">
+          Gallery
         </Link>
       </Navbar>
     </div>

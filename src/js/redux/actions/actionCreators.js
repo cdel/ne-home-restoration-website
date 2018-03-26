@@ -1,30 +1,10 @@
-function addTodo(payload) {
+function changeAlbum(albumId) {
   return {
-    type: 'ADD_TODO',
-    payload
-  };
-}
-
-function removeTodo(id) {
-  return {
-    type: 'REMOVE_TODO',
-    payload: {
-      id
-    }
-  };
-}
-
-function completeTodo(id) {
-  return {
-    type: 'COMPLETE_TODO',
-    payload: {
-      id
-    }
+    type: 'CHANGE_ALBUM',
+    payload: {activeAlbum: albumId}
   };
 }
 
 export {
-  completeTodo,
-  removeTodo,
-  addTodo
+  changeAlbum
 };

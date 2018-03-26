@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import GalleryPage from '_containers/GalleryPage/GalleryPage';
+import GalleryPage from '_containers/GalleryPage/GalleryPage_container';
 import Navbar from '_components/Navbar/Navbar';
 import './App.scss';
 
