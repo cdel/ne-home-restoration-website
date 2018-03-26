@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import ActivePage from '_components/Pages/Active';
-import CompletedPage from '_components/Pages/Completed';
+import GalleryPage from '_containers/GalleryPage/GalleryPage';
 import Navbar from '_components/Navbar/Navbar';
 import './App.scss';
 
@@ -18,8 +17,7 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <div className="App-wrapper">
-          <Route exact path="/" component={ActivePage} />
-          <Route path="/completed" component={CompletedPage} />
+          <Route path="/gallery" component={GalleryPage} />
         </div>
       </div>
       </Router>
