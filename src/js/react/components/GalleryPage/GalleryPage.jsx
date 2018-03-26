@@ -52,18 +52,28 @@ class GalleryPage extends React.Component {
     }));
   }
 
-  createImageUrl({farm, server, id, secret}) {
-    return `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`;
-  }
-
-  componentDidMount() {
-    this.fetchPhotos(this.props.activeAlbum).then(album => {
+  loadPhotos(albumId) {
+    this.fetchPhotos(albumId).then(album => {
       const photos = album.photoset.photo.map(photo => ({
         src: this.createImageUrl(photo),
         alt: photo.title
       }));
       this.setState(state => ({photos}));
     });
+  }
+
+  createImageUrl({farm, server, id, secret}) {
+    return `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`;
+  }
+
+  componentDidMount() {
+    this.loadPhotos(this.props.activeAlbum);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.activeAlbum !== this.props.activeAlbum) {
+      this.loadPhotos(nextProps.activeAlbum);
+    }
   }
 
   render() {
