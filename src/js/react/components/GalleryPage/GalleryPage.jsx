@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Lightbox from 'react-image-lightbox';
+import Slideshow from '_components/Slideshow/Slideshow';
 
 const API_KEY = "067d073d001ed3cf049fb0dc97ab54c6";
 
@@ -89,19 +90,7 @@ class GalleryPage extends React.Component {
         {albums.map(album => (
           <button key={album.albumId} disabled={album.albumId === activeAlbum} onClick={this.handleAlbumChange(album.albumId)}>{album.name}</button>
         ))}
-        {this.state.photos.map((photo, index) => (
-            <img onClick={this.openPreview(index)} key={photo.src} src={photo.src} alt={photo.alt} />
-        ))}
-        {isOpen && (
-          <Lightbox
-            mainSrc={photos[activePhoto].src}
-            nextSrc={photos[(activePhoto + 1) % photos.length].src}
-            prevSrc={photos[(activePhoto + photos.length - 1) % photos.length].src}
-            onCloseRequest={this.closePreview}
-            onMovePrevRequest={this.handlePrevPress}
-            onMoveNextRequest={this.handleNextPress}
-          />
-        )}
+        <Slideshow photos={photos} />
       </div>
     );
   }
