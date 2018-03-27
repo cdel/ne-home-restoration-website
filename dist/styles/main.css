@@ -2,6 +2,14 @@
   max-width: 1280px;
   padding: 0 5px;
   margin: 0 auto; }
+.Slideshow {
+  background: black; }
+  .Slideshow-imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; }
 .NavigationBar {
   background: #000;
   margin-bottom: 16px; }
@@ -5582,7 +5590,7 @@ button.close {
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -5639,9 +5647,9 @@ button.close {
   .carousel-caption {
     left: 20%;
     right: 20%;
-    padding-bottom: 30px; }
+    padding-bottom: 10px; }
   .carousel-indicators {
-    bottom: 20px; } }
+    bottom: 0px; } }
 
 .clearfix:before, .clearfix:after {
   content: " ";

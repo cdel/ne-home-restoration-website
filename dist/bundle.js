@@ -60817,6 +60817,10 @@ var _reactImageLightbox = __webpack_require__(/*! react-image-lightbox */ "../no
 
 var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
 
+var _Slideshow = __webpack_require__(/*! _components/Slideshow/Slideshow */ "./js/react/components/Slideshow/Slideshow.jsx");
+
+var _Slideshow2 = _interopRequireDefault(_Slideshow);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60954,17 +60958,7 @@ var GalleryPage = function (_React$Component) {
             album.name
           );
         }),
-        this.state.photos.map(function (photo, index) {
-          return _react2.default.createElement('img', { onClick: _this3.openPreview(index), key: photo.src, src: photo.src, alt: photo.alt });
-        }),
-        isOpen && _react2.default.createElement(_reactImageLightbox2.default, {
-          mainSrc: photos[activePhoto].src,
-          nextSrc: photos[(activePhoto + 1) % photos.length].src,
-          prevSrc: photos[(activePhoto + photos.length - 1) % photos.length].src,
-          onCloseRequest: this.closePreview,
-          onMovePrevRequest: this.handlePrevPress,
-          onMoveNextRequest: this.handleNextPress
-        })
+        _react2.default.createElement(_Slideshow2.default, { photos: photos })
       );
     }
   }]);
@@ -61040,6 +61034,155 @@ exports.default = NavigationBar;
 /*!************************************************!*\
   !*** ./js/react/components/Navbar/Navbar.scss ***!
   \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./js/react/components/Slideshow/Slideshow.jsx":
+/*!*****************************************************!*\
+  !*** ./js/react/components/Slideshow/Slideshow.jsx ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactImageLightbox = __webpack_require__(/*! react-image-lightbox */ "../node_modules/react-image-lightbox/dist/main.js");
+
+var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
+
+var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ "../node_modules/react-bootstrap/es/index.js");
+
+__webpack_require__(/*! ./Slideshow.scss */ "./js/react/components/Slideshow/Slideshow.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Slideshow = function (_React$Component) {
+  _inherits(Slideshow, _React$Component);
+
+  function Slideshow(props) {
+    _classCallCheck(this, Slideshow);
+
+    var _this = _possibleConstructorReturn(this, (Slideshow.__proto__ || Object.getPrototypeOf(Slideshow)).call(this, props));
+
+    _this.state = {
+      isPreviewOpen: false,
+      activePhoto: 0,
+      direction: 'next'
+    };
+    _this.handleSelect = function (selectedPhoto, event) {
+      _this.setState({ activePhoto: selectedPhoto, direction: event.direction });
+    };
+    _this.togglePreview = function () {
+      _this.setState(function (prevState) {
+        return { isPreviewOpen: !prevState.isPreviewOpen };
+      });
+    };
+    return _this;
+  }
+
+  _createClass(Slideshow, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _state = this.state,
+          activePhoto = _state.activePhoto,
+          isPreviewOpen = _state.isPreviewOpen,
+          direction = _state.direction;
+      var _props = this.props,
+          photos = _props.photos,
+          height = _props.height;
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'Slideshow' },
+        _react2.default.createElement(
+          _reactBootstrap.Carousel,
+          {
+            activeIndex: activePhoto,
+            direction: direction,
+            onSelect: this.handleSelect
+          },
+          photos.length && photos.map(function (photo, index) {
+            return _react2.default.createElement(
+              _reactBootstrap.Carousel.Item,
+              { key: photo.alt + '-' + index, direction: direction },
+              _react2.default.createElement(
+                'div',
+                { className: 'Slideshow-imageWrapper', style: { height: height + 'px' } },
+                _react2.default.createElement('img', { onClick: _this2.togglePreview, alt: photo.alt, src: photo.src })
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Carousel.Caption,
+                null,
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  photo.alt
+                ),
+                photo.description && _react2.default.createElement(
+                  'p',
+                  null,
+                  photo.description
+                )
+              )
+            );
+          })
+        ),
+        isPreviewOpen && _react2.default.createElement(_reactImageLightbox2.default, {
+          mainSrc: photos[activePhoto].src,
+          onCloseRequest: this.togglePreview
+        })
+      );
+    }
+  }]);
+
+  return Slideshow;
+}(_react2.default.Component);
+
+Slideshow.defaultProps = {
+  height: 500
+};
+
+Slideshow.propTypes = {
+  height: _propTypes2.default.number,
+  photos: _propTypes2.default.arrayOf(_propTypes2.default.shape({ src: _propTypes2.default.string, alt: _propTypes2.default.string })).isRequired
+};
+
+exports.default = Slideshow;
+
+/***/ }),
+
+/***/ "./js/react/components/Slideshow/Slideshow.scss":
+/*!******************************************************!*\
+  !*** ./js/react/components/Slideshow/Slideshow.scss ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
