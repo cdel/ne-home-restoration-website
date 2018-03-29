@@ -7,8 +7,8 @@ import GalleryPage from '_components/GalleryPage/GalleryPage';
 // Whenever state changes, the UserList will automatically re-render
 function mapStateToProps(state) {
   return {
-    activeAlbum: state.gallery.activeAlbum,
-    albums: state.gallery.albums,
+    slideshow: state.gallery.slideshow,
+    albums: state.gallery.albums
   }
 }
 
@@ -16,6 +16,9 @@ function mapDispatchToProps(dispatch) {
   return {
     handleAlbumChange(albumId) {
       dispatch(changeAlbum(albumId));
+    }
+    fetchPhotos(albumId) {
+      
     }
   }
 }

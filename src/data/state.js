@@ -53,7 +53,11 @@ const state = {
   },
   gallery: {
     title: "Showcasing our work",
-    activeAlbum: "72157694152735684",
+    slideshow: {
+      albumId: "72157694152735684",
+      fetching: false,
+      fetched: false
+    },
     albums: [
       {
         name: "Bathrooms",

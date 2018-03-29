@@ -1,10 +1,13 @@
-function changeAlbum(albumId) {
+export function changeAlbum(albumId) {
   return {
-    type: 'CHANGE_ALBUM',
+    type: 'FETCH_ALBUM_IMAGES',
     payload: {activeAlbum: albumId}
   };
 }
 
-export {
-  changeAlbum
-};
+export function fetchAlbumPhotos(albumId) {
+  return {
+    type: 'FETCH_ALBUM_IMAGES',
+    payload: {activeAlbum: albumId}
+  };
+}

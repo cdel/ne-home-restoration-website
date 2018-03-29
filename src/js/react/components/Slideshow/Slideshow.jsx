@@ -34,7 +34,7 @@ class Slideshow extends React.Component {
           direction={direction}
           onSelect={this.handleSelect}
         >
-        {photos.length && (
+        {photos.length ? (
           photos.map((photo, index) => (
             <Carousel.Item key={`${photo.alt}-${index}`} direction={direction}>
               <div className="Slideshow-imageWrapper" style={{height: `${height}px`}}>
@@ -48,6 +48,8 @@ class Slideshow extends React.Component {
               </Carousel.Caption>
             </Carousel.Item>
           ))
+        ) : (
+          <div className="Slideshow is-loading">Slideshow is loading your images!</div>
         )}
         </Carousel>
         {isPreviewOpen && (

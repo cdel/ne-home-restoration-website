@@ -7,4 +7,7 @@
     width: 100%;
     overflow: hidden;
   }
+  &.is-loading {
+    color: white;
+  }
 }
