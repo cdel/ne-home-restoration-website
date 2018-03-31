@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const autoPrefixer = require('autoprefixer');
 
 module.exports = {
     mode: "development",
@@ -50,7 +51,14 @@ module.exports = {
                                 url: false,
                                 sourceMap: true
                             }
-                        }, 
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                               sourceMap: true,
+                               plugins: [autoPrefixer()]
+                            }
+                        },
                         {
                             loader: 'sass-loader',
                             options: {
