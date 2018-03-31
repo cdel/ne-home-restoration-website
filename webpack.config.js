@@ -5,34 +5,34 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoPrefixer = require('autoprefixer');
 
-module.exports = {
+const browserConfig = {
     mode: "development",
     /* Sets the entry point directory (All of our source files go into it) */
-    context: path.resolve(__dirname, 'src'),
+    context: path.resolve(__dirname, 'src/client'),
     entry: ["babel-polyfill", './js/main.js'],
     output: {
         filename: 'bundle.js',
         /* Sets the output point directory (All of our build files go into it) */
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/client')
     },
     devtool: "source-map",
     resolve: {
         extensions: [".js", ".jsx"],
         /* Helps avoid absolute paths */
         alias: {
-            _components: path.resolve(__dirname, 'src/js/react/components'),
-            _containers: path.resolve(__dirname, 'src/js/react/containers'),
-            _actions: path.resolve(__dirname, 'src/js/redux/actions'),
-            _reducers: path.resolve(__dirname, 'src/js/redux/reducers'),
-            _thunks: path.resolve(__dirname, 'src/js/redux/thunks'),
-            _selectors: path.resolve(__dirname, 'src/js/redux/selectors'),
-            _store: path.resolve(__dirname, 'src/js/redux/store'),
+            _components: path.resolve(__dirname, 'src/client/js/react/components'),
+            _containers: path.resolve(__dirname, 'src/client/js/react/containers'),
+            _actions: path.resolve(__dirname, 'src/client/js/redux/actions'),
+            _reducers: path.resolve(__dirname, 'src/client/js/redux/reducers'),
+            _thunks: path.resolve(__dirname, 'src/client/js/redux/thunks'),
+            _selectors: path.resolve(__dirname, 'src/client/js/redux/selectors'),
+            _store: path.resolve(__dirname, 'src/client/js/redux/store'),
             _data: path.resolve(__dirname, 'src/data'),
-            _utilities: path.resolve(__dirname, 'src/js/utilities'),
-            _styles: path.resolve(__dirname, 'src/styles'),
-            _assets: path.resolve(__dirname, 'src/assets')
+            _utilities: path.resolve(__dirname, 'src/client/js/utilities'),
+            _styles: path.resolve(__dirname, 'src/client/styles'),
+            _assets: path.resolve(__dirname, 'src/client/assets')
         },
-        modules: [path.resolve(__dirname, "src/js"), "node_modules"]
+        modules: [path.resolve(__dirname, "src/client/js"), "node_modules"]
     },
     module: {
         /* Looks for all sass files being imported by React components */
@@ -55,6 +55,7 @@ module.exports = {
                         {
                             loader: 'postcss-loader',
                             options: {
+                                // Meant to add CSS browser prefixes to properties not widely supported.
                                sourceMap: true,
                                plugins: [autoPrefixer()]
                             }
@@ -102,8 +103,14 @@ module.exports = {
     /* Runs development server */
     devServer: {
         open: true,
-        contentBase: path.join(__dirname, "dist"),
+        contentBase: path.join(__dirname, "dist/client"),
         compress: true,
         port: 9000
     }
 };
+
+const serverConfig = {
+
+};
+
+module.exports = [browserConfig];
