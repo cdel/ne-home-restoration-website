@@ -23,6 +23,7 @@ module.exports = {
             _containers: path.resolve(__dirname, 'src/js/react/containers'),
             _actions: path.resolve(__dirname, 'src/js/redux/actions'),
             _reducers: path.resolve(__dirname, 'src/js/redux/reducers'),
+            _thunks: path.resolve(__dirname, 'src/js/redux/thunks'),
             _selectors: path.resolve(__dirname, 'src/js/redux/selectors'),
             _store: path.resolve(__dirname, 'src/js/redux/store'),
             _data: path.resolve(__dirname, 'src/data'),

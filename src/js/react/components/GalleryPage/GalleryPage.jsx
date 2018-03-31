@@ -9,88 +9,24 @@ class GalleryPage extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      loading: true,
-      activePhoto: 0,
-      isOpen: false,
-      photos: []
-    }
-    this.openPreview = (photoIndex) => (e) => {
-      this.setState({activePhoto: photoIndex, isOpen: true});
-    };
-    this.closePreview = (e) => this.setState({isOpen: false});
-    this.handlePrevPress = (e) => {
-      this.setState(prevState => (
-        {
-          activePhoto: (prevState.activePhoto + prevState.photos.length - 1) % prevState.photos.length
-        }
-      ));
-    };
-    this.handleNextPress = (e) => {
-      this.setState(prevState => (
-        {
-          activePhoto: (prevState.activePhoto + prevState.photos.length + 1) % prevState.photos.length
-        }
-      ));
-    };
     this.handleAlbumChange = (albumId) => (e) => {
-      if (this.state.loading) return;
       this.props.handleAlbumChange(albumId);
     };
   }
 
-  fetchPhotos(albumId) {
-    return (new Promise((res, rej) => {
-      const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${API_KEY}&photoset_id=${albumId}&format=json&nojsoncallback=1`;
-      const xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          res(JSON.parse(this.responseText));
-        } else if (this.status === 404) {
-          rej('Failed to fetch photos from album');
-        }
-      };
-      xhr.open('GET', url);
-      xhr.send();
-    }));
-  }
-
-  loadPhotos(albumId) {
-    this.setState({loading: true})
-    this.fetchPhotos(albumId).then(album => {
-      const photos = album.photoset.photo.map(photo => ({
-        src: this.createImageUrl(photo),
-        alt: photo.title
-      }));
-      this.setState(state => ({photos, loading: false}));
-    });
-  }
-
-  createImageUrl({farm, server, id, secret}) {
-    return `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`;
-  }
-
   componentDidMount() {
-    this.loadPhotos(this.props.activeAlbum);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.activeAlbum !== this.props.activeAlbum) {
-      this.loadPhotos(nextProps.activeAlbum);
-    }
+    const {albumId} = this.props.slideshow;
+    this.props.handleAlbumChange(albumId);
   }
 
   render() {
-
-    const { activePhoto, isOpen, photos, loading } = this.state;
-    const {albums, activeAlbum} = this.props;
-
+    const {albums, slideshow} = this.props;
     return (
       <div>
         {albums.map(album => (
-          <button key={album.albumId} disabled={album.albumId === activeAlbum} onClick={this.handleAlbumChange(album.albumId)}>{album.name}</button>
+          <button key={album.albumId} disabled={album.albumId === slideshow.albumId} onClick={this.handleAlbumChange(album.albumId)}>{album.name}</button>
         ))}
-        <Slideshow photos={photos} />
+        <Slideshow photos={slideshow.photos} />
       </div>
     );
   }

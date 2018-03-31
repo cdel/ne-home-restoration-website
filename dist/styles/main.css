@@ -10,6 +10,8 @@
     align-items: center;
     width: 100%;
     overflow: hidden; }
+  .Slideshow.is-loading {
+    color: white; }
 .NavigationBar {
   background: #000;
   margin-bottom: 16px; }

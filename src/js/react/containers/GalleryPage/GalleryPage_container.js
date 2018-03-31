@@ -1,5 +1,5 @@
-import {changeAlbum} from '_actions/actionCreators';
-import {bindActionCreators} from 'redux';
+import {changeAlbum} from '_actions/gallery/gallery_actions';
+import galleryThunks from '_thunks/gallery/gallery_thunks';
 import {connect} from 'react-redux';
 import GalleryPage from '_components/GalleryPage/GalleryPage';
 
@@ -16,9 +16,7 @@ function mapDispatchToProps(dispatch) {
   return {
     handleAlbumChange(albumId) {
       dispatch(changeAlbum(albumId));
-    }
-    fetchPhotos(albumId) {
-      
+      dispatch(galleryThunks.fetchAlbumPhotos(albumId));
     }
   }
 }
