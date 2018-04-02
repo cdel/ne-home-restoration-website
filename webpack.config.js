@@ -5,11 +5,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoPrefixer = require('autoprefixer');
 
+const { NODE_ENV } = process.env;
+
 const browserConfig = {
-    mode: "development",
+    mode: ( NODE_ENV === "development" ) ? "development" : "production",
     /* Sets the entry point directory (All of our source files go into it) */
     context: path.resolve(__dirname, 'src/client'),
-    entry: ["babel-polyfill", './js/main.js'],
+    entry: './js/main.js',
     output: {
         filename: 'bundle.js',
         /* Sets the output point directory (All of our build files go into it) */
@@ -75,7 +77,7 @@ const browserConfig = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                      presets: ["es2015", "react"]
+                      presets: ["react-app"]
                     }
                }
             },
@@ -110,7 +112,44 @@ const browserConfig = {
 };
 
 const serverConfig = {
-
+    mode: "development",
+    /* Sets the entry point directory (All of our source files go into it) */
+    context: path.resolve(__dirname, 'src/server'),
+    entry: './server.js',
+    target: "node",
+    output: {
+        filename: 'server.js',
+        /* Sets the output point directory (All of our build files go into it) */
+        path: path.resolve(__dirname, 'dist/server'),
+        libraryTarget: 'commonjs2'
+    },
+    module: {
+        /* Looks for all sass files being imported by React components */
+        rules: [
+            {
+                test: /\.scss$/,
+                exclude: /(node_modules|bower_components)/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'sass-loader/locals',
+                        }
+                    ]
+                  })
+            },
+            {
+                test: /\.js/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                      presets: ["react-app"]
+                    }
+               }
+            }
+        ]
+    }
 };
 
 module.exports = [browserConfig];

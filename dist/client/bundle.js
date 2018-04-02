@@ -62751,15 +62751,11 @@ module.exports = function(originalModule) {
 /*!************************!*\
   !*** ../data/state.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
 var state = {
   social_media: {
     facebook: {
@@ -62866,7 +62862,7 @@ var state = {
     }]
   }
 };
-exports.default = state;
+/* harmony default export */ __webpack_exports__["default"] = (state);
 
 /***/ }),
 
@@ -62874,38 +62870,45 @@ exports.default = state;
 /*!********************!*\
   !*** ./js/main.js ***!
   \********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "../../node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "../../node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_store_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! _store/store.js */ "./js/redux/store/store.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "../../node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! _components/App */ "./js/react/components/App.jsx");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! _styles/main.scss */ "./styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = '/Users/Estiven/Documents/gitrepos/ne-home-restoration-website/src/client/js/main.js';
 
 
-var _react = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
 
-var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(/*! react-dom */ "../../node_modules/react-dom/index.js");
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRedux = __webpack_require__(/*! react-redux */ "../../node_modules/react-redux/es/index.js");
 
-var _store = __webpack_require__(/*! _store/store.js */ "./js/redux/store/store.js");
 
-var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "../../node_modules/react-router-dom/es/index.js");
-
-var _App = __webpack_require__(/*! _components/App */ "./js/react/components/App.jsx");
-
-var _App2 = _interopRequireDefault(_App);
-
-__webpack_require__(/*! _styles/main.scss */ "./styles/main.scss");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_reactDom2.default.render(_react2.default.createElement(
-  _reactRedux.Provider,
-  { store: _store.store },
-  _react2.default.createElement(_App2.default, null)
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+  react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"],
+  { store: _store_store_js__WEBPACK_IMPORTED_MODULE_3__["store"], __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  },
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  })
 ), document.getElementById('app'));
 
 /***/ }),
@@ -62914,41 +62917,33 @@ _reactDom2.default.render(_react2.default.createElement(
 /*!*************************************!*\
   !*** ./js/react/components/App.jsx ***!
   \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "../../node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _containers_GalleryPage_GalleryPage_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! _containers/GalleryPage/GalleryPage_container */ "./js/react/containers/GalleryPage/GalleryPage_container.js");
+/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! _components/Navbar/Navbar */ "./js/react/components/Navbar/Navbar.jsx");
+/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./App.scss */ "./js/react/components/App.scss");
+/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_App_scss__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = '/Users/Estiven/Documents/gitrepos/ne-home-restoration-website/src/client/js/react/components/App.jsx';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "../../node_modules/react-router-dom/es/index.js");
-
-var _GalleryPage_container = __webpack_require__(/*! _containers/GalleryPage/GalleryPage_container */ "./js/react/containers/GalleryPage/GalleryPage_container.js");
-
-var _GalleryPage_container2 = _interopRequireDefault(_GalleryPage_container);
-
-var _Navbar = __webpack_require__(/*! _components/Navbar/Navbar */ "./js/react/components/Navbar/Navbar.jsx");
-
-var _Navbar2 = _interopRequireDefault(_Navbar);
-
-__webpack_require__(/*! ./App.scss */ "./js/react/components/App.scss");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
 
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
@@ -62967,17 +62962,44 @@ var App = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        _reactRouterDom.BrowserRouter,
-        null,
-        _react2.default.createElement(
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+        react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          },
+          __self: this
+        },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
           'div',
-          { className: 'App' },
-          _react2.default.createElement(_Navbar2.default, null),
-          _react2.default.createElement(
+          { className: 'App', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
+            },
+            __self: this
+          },
+          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            },
+            __self: this
+          }),
+          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
             'div',
-            { className: 'App-wrapper' },
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/gallery', component: _GalleryPage_container2.default })
+            { className: 'App-wrapper', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 19
+              },
+              __self: this
+            },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], { path: '/gallery', component: _containers_GalleryPage_GalleryPage_container__WEBPACK_IMPORTED_MODULE_2__["default"], __source: {
+                fileName: _jsxFileName,
+                lineNumber: 20
+              },
+              __self: this
+            })
           )
         )
       );
@@ -62985,9 +63007,9 @@ var App = function (_React$Component) {
   }]);
 
   return App;
-}(_react2.default.Component);
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-exports.default = App;
+/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
@@ -63006,41 +63028,32 @@ exports.default = App;
 /*!*********************************************************!*\
   !*** ./js/react/components/GalleryPage/GalleryPage.jsx ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_image_lightbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-image-lightbox */ "../../node_modules/react-image-lightbox/dist/main.js");
+/* harmony import */ var react_image_lightbox__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_image_lightbox__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Slideshow_Slideshow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! _components/Slideshow/Slideshow */ "./js/react/components/Slideshow/Slideshow.jsx");
+var _jsxFileName = '/Users/Estiven/Documents/gitrepos/ne-home-restoration-website/src/client/js/react/components/GalleryPage/GalleryPage.jsx';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "../../node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactImageLightbox = __webpack_require__(/*! react-image-lightbox */ "../../node_modules/react-image-lightbox/dist/main.js");
-
-var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
-
-var _Slideshow = __webpack_require__(/*! _components/Slideshow/Slideshow */ "./js/react/components/Slideshow/Slideshow.jsx");
-
-var _Slideshow2 = _interopRequireDefault(_Slideshow);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
 
 var API_KEY = "067d073d001ed3cf049fb0dc97ab54c6";
 
@@ -63076,25 +63089,41 @@ var GalleryPage = function (_React$Component) {
           albums = _props.albums,
           slideshow = _props.slideshow;
 
-      return _react2.default.createElement(
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
         'div',
-        null,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25
+          },
+          __self: this
+        },
         albums.map(function (album) {
-          return _react2.default.createElement(
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
             'button',
-            { key: album.albumId, disabled: album.albumId === slideshow.albumId, onClick: _this2.handleAlbumChange(album.albumId) },
+            { key: album.albumId, disabled: album.albumId === slideshow.albumId, onClick: _this2.handleAlbumChange(album.albumId), __source: {
+                fileName: _jsxFileName,
+                lineNumber: 27
+              },
+              __self: _this2
+            },
             album.name
           );
         }),
-        _react2.default.createElement(_Slideshow2.default, { photos: slideshow.photos })
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Slideshow_Slideshow__WEBPACK_IMPORTED_MODULE_3__["default"], { photos: slideshow.photos, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+          },
+          __self: this
+        })
       );
     }
   }]);
 
   return GalleryPage;
-}(_react2.default.Component);
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-exports.default = GalleryPage;
+/* harmony default export */ __webpack_exports__["default"] = (GalleryPage);
 
 /***/ }),
 
@@ -63102,59 +63131,86 @@ exports.default = GalleryPage;
 /*!***********************************************!*\
   !*** ./js/react/components/Navbar/Navbar.jsx ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "../../node_modules/react-router-dom/es/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "../../node_modules/react-bootstrap/es/index.js");
+/* harmony import */ var _Navbar_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Navbar.scss */ "./js/react/components/Navbar/Navbar.scss");
+/* harmony import */ var _Navbar_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Navbar_scss__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = '/Users/Estiven/Documents/gitrepos/ne-home-restoration-website/src/client/js/react/components/Navbar/Navbar.jsx',
+    _this = undefined;
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
-var _react = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
 
-var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "../../node_modules/react-router-dom/es/index.js");
 
-var _propTypes = __webpack_require__(/*! prop-types */ "../../node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ "../../node_modules/react-bootstrap/es/index.js");
-
-__webpack_require__(/*! ./Navbar.scss */ "./js/react/components/Navbar/Navbar.scss");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var NavigationBar = function NavigationBar(props) {
-  return _react2.default.createElement(
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
     'div',
-    { className: 'NavigationBar' },
-    _react2.default.createElement(
+    { className: 'NavigationBar', __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: _this
+    },
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
       'div',
-      { className: 'NavigationBar-logo' },
-      _react2.default.createElement(_reactBootstrap.Image, { src: 'assets/react-icon.png', alt: 'React Boilerplate', responsive: true })
+      { className: 'NavigationBar-logo', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: _this
+      },
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Image"], { src: 'assets/react-icon.png', alt: 'React Boilerplate', responsive: true, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: _this
+      })
     ),
-    _react2.default.createElement(
-      _reactBootstrap.Navbar,
-      null,
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/' },
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Navbar"],
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: _this
+      },
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+        react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"],
+        { to: '/', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14
+          },
+          __self: _this
+        },
         'Home'
       ),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/gallery' },
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+        react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"],
+        { to: '/gallery', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          },
+          __self: _this
+        },
         'Gallery'
       )
     )
   );
 };
 
-exports.default = NavigationBar;
+/* harmony default export */ __webpack_exports__["default"] = (NavigationBar);
 
 /***/ }),
 
@@ -63173,41 +63229,35 @@ exports.default = NavigationBar;
 /*!*****************************************************!*\
   !*** ./js/react/components/Slideshow/Slideshow.jsx ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_image_lightbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-image-lightbox */ "../../node_modules/react-image-lightbox/dist/main.js");
+/* harmony import */ var react_image_lightbox__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_image_lightbox__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "../../node_modules/react-bootstrap/es/index.js");
+/* harmony import */ var _Slideshow_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Slideshow.scss */ "./js/react/components/Slideshow/Slideshow.scss");
+/* harmony import */ var _Slideshow_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Slideshow_scss__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = '/Users/Estiven/Documents/gitrepos/ne-home-restoration-website/src/client/js/react/components/Slideshow/Slideshow.jsx';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "../../node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactImageLightbox = __webpack_require__(/*! react-image-lightbox */ "../../node_modules/react-image-lightbox/dist/main.js");
-
-var _reactImageLightbox2 = _interopRequireDefault(_reactImageLightbox);
-
-var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ "../../node_modules/react-bootstrap/es/index.js");
-
-__webpack_require__(/*! ./Slideshow.scss */ "./js/react/components/Slideshow/Slideshow.scss");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
 
 var Slideshow = function (_React$Component) {
   _inherits(Slideshow, _React$Component);
@@ -63247,67 +63297,120 @@ var Slideshow = function (_React$Component) {
           height = _props.height;
 
 
-      return _react2.default.createElement(
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
         'div',
-        { className: 'Slideshow' },
-        _react2.default.createElement(
-          _reactBootstrap.Carousel,
+        { className: 'Slideshow', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          },
+          __self: this
+        },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+          react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Carousel"],
           {
             activeIndex: activePhoto,
             direction: direction,
-            onSelect: this.handleSelect
+            onSelect: this.handleSelect,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            },
+            __self: this
           },
           photos.length ? photos.map(function (photo, index) {
-            return _react2.default.createElement(
-              _reactBootstrap.Carousel.Item,
-              { key: photo.alt + '-' + index, direction: direction },
-              _react2.default.createElement(
+            return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+              react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Carousel"].Item,
+              { key: photo.alt + '-' + index, direction: direction, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 39
+                },
+                __self: _this2
+              },
+              react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
                 'div',
-                { className: 'Slideshow-imageWrapper', style: { height: height + 'px' } },
-                _react2.default.createElement('img', { onClick: _this2.togglePreview, alt: photo.alt, src: photo.src })
+                { className: 'Slideshow-imageWrapper', style: { height: height + 'px' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 40
+                  },
+                  __self: _this2
+                },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('img', { onClick: _this2.togglePreview, alt: photo.alt, src: photo.src, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 41
+                  },
+                  __self: _this2
+                })
               ),
-              _react2.default.createElement(
-                _reactBootstrap.Carousel.Caption,
-                null,
-                _react2.default.createElement(
+              react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+                react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Carousel"].Caption,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 43
+                  },
+                  __self: _this2
+                },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
                   'h3',
-                  null,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 44
+                    },
+                    __self: _this2
+                  },
                   photo.alt
                 ),
-                photo.description && _react2.default.createElement(
+                photo.description && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
                   'p',
-                  null,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 46
+                    },
+                    __self: _this2
+                  },
                   photo.description
                 )
               )
             );
-          }) : _react2.default.createElement(
+          }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
             'div',
-            { className: 'Slideshow is-loading' },
+            { className: 'Slideshow is-loading', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 52
+              },
+              __self: this
+            },
             'Slideshow is loading your images!'
           )
         ),
-        isPreviewOpen && _react2.default.createElement(_reactImageLightbox2.default, {
+        isPreviewOpen && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_image_lightbox__WEBPACK_IMPORTED_MODULE_2___default.a, {
           mainSrc: photos[activePhoto].src,
-          onCloseRequest: this.togglePreview
+          onCloseRequest: this.togglePreview,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          },
+          __self: this
         })
       );
     }
   }]);
 
   return Slideshow;
-}(_react2.default.Component);
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 Slideshow.defaultProps = {
   height: 500
 };
 
 Slideshow.propTypes = {
-  height: _propTypes2.default.number,
-  photos: _propTypes2.default.arrayOf(_propTypes2.default.shape({ src: _propTypes2.default.string, alt: _propTypes2.default.string })).isRequired
+  height: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  photos: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({ src: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, alt: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string })).isRequired
 };
 
-exports.default = Slideshow;
+/* harmony default export */ __webpack_exports__["default"] = (Slideshow);
 
 /***/ }),
 
@@ -63326,29 +63429,19 @@ exports.default = Slideshow;
 /*!******************************************************************!*\
   !*** ./js/react/containers/GalleryPage/GalleryPage_container.js ***!
   \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_gallery_gallery_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! _actions/gallery/gallery_actions */ "./js/redux/actions/gallery/gallery_actions.js");
+/* harmony import */ var _thunks_gallery_gallery_thunks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! _thunks/gallery/gallery_thunks */ "./js/redux/thunks/gallery/gallery_thunks.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "../../node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_GalleryPage_GalleryPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! _components/GalleryPage/GalleryPage */ "./js/react/components/GalleryPage/GalleryPage.jsx");
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
-var _gallery_actions = __webpack_require__(/*! _actions/gallery/gallery_actions */ "./js/redux/actions/gallery/gallery_actions.js");
 
-var _gallery_thunks = __webpack_require__(/*! _thunks/gallery/gallery_thunks */ "./js/redux/thunks/gallery/gallery_thunks.js");
-
-var _gallery_thunks2 = _interopRequireDefault(_gallery_thunks);
-
-var _reactRedux = __webpack_require__(/*! react-redux */ "../../node_modules/react-redux/es/index.js");
-
-var _GalleryPage = __webpack_require__(/*! _components/GalleryPage/GalleryPage */ "./js/react/components/GalleryPage/GalleryPage.jsx");
-
-var _GalleryPage2 = _interopRequireDefault(_GalleryPage);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Get apps state and pass it as props to UserList
 // Whenever state changes, the UserList will automatically re-render
@@ -63362,13 +63455,13 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     handleAlbumChange: function handleAlbumChange(albumId) {
-      dispatch((0, _gallery_actions.changeAlbum)(albumId));
-      dispatch(_gallery_thunks2.default.fetchAlbumPhotos(albumId));
+      dispatch(Object(_actions_gallery_gallery_actions__WEBPACK_IMPORTED_MODULE_0__["changeAlbum"])(albumId));
+      dispatch(_thunks_gallery_gallery_thunks__WEBPACK_IMPORTED_MODULE_1__["default"].fetchAlbumPhotos(albumId));
     }
   };
 }
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_GalleryPage2.default);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(_components_GalleryPage_GalleryPage__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
@@ -63376,17 +63469,13 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 /*!*****************************************************!*\
   !*** ./js/redux/actions/gallery/gallery_actions.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: changeAlbum, fetchAlbumPhotos */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.changeAlbum = changeAlbum;
-exports.fetchAlbumPhotos = fetchAlbumPhotos;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeAlbum", function() { return changeAlbum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAlbumPhotos", function() { return fetchAlbumPhotos; });
 function changeAlbum(albumId) {
   return {
     type: 'CHANGE_ALBUM',
@@ -63407,15 +63496,11 @@ function fetchAlbumPhotos(promise) {
 /*!********************************************!*\
   !*** ./js/redux/reducers/about_reducer.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
 function about() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
@@ -63423,7 +63508,7 @@ function about() {
   return state;
 }
 
-exports.default = about;
+/* harmony default export */ __webpack_exports__["default"] = (about);
 
 /***/ }),
 
@@ -63431,15 +63516,11 @@ exports.default = about;
 /*!**********************************************!*\
   !*** ./js/redux/reducers/contact_reducer.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
 function contact() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
@@ -63447,7 +63528,7 @@ function contact() {
   return state;
 }
 
-exports.default = contact;
+/* harmony default export */ __webpack_exports__["default"] = (contact);
 
 /***/ }),
 
@@ -63455,15 +63536,11 @@ exports.default = contact;
 /*!******************************************!*\
   !*** ./js/redux/reducers/faq_reducer.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
 function faq() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
@@ -63471,7 +63548,7 @@ function faq() {
   return state;
 }
 
-exports.default = faq;
+/* harmony default export */ __webpack_exports__["default"] = (faq);
 
 /***/ }),
 
@@ -63479,15 +63556,11 @@ exports.default = faq;
 /*!************************************************!*\
   !*** ./js/redux/reducers/financing_reducer.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
 function financing() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
@@ -63495,7 +63568,7 @@ function financing() {
   return state;
 }
 
-exports.default = financing;
+/* harmony default export */ __webpack_exports__["default"] = (financing);
 
 /***/ }),
 
@@ -63503,19 +63576,12 @@ exports.default = financing;
 /*!**********************************************!*\
   !*** ./js/redux/reducers/gallery_reducer.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-exports.default = gallery;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gallery; });
 function createImage(_ref) {
   var farm = _ref.farm,
       server = _ref.server,
@@ -63537,17 +63603,17 @@ function gallery() {
   var retval = void 0;
   switch (action.type) {
     case 'CHANGE_ALBUM':
-      retval = _extends({}, state, { slideshow: _extends({}, state.slideshow, { albumId: action.payload }) });
+      retval = Object.assign({}, state, { slideshow: Object.assign({}, state.slideshow, { albumId: action.payload }) });
       break;
     case 'FETCH_ALBUM_IMAGES_PENDING':
-      retval = _extends({}, state, { slideshow: _extends({}, state.slideshow, { fetching: true }) });
+      retval = Object.assign({}, state, { slideshow: Object.assign({}, state.slideshow, { fetching: true }) });
       break;
     case 'FETCH_ALBUM_IMAGES_REJECTED':
-      retval = _extends({}, state, { slideshow: _extends({}, state.slideshow, { fetched: false, fetching: false }) });
+      retval = Object.assign({}, state, { slideshow: Object.assign({}, state.slideshow, { fetched: false, fetching: false }) });
       break;
     case 'FETCH_ALBUM_IMAGES_FULFILLED':
       var photos = action.payload.data.photoset.photo.map(createImage);
-      retval = _extends({}, state, { slideshow: _extends({}, state.slideshow, { photos: photos }) });
+      retval = Object.assign({}, state, { slideshow: Object.assign({}, state.slideshow, { photos: photos }) });
       break;
     default:
       retval = state;
@@ -63561,49 +63627,29 @@ function gallery() {
 /*!************************************!*\
   !*** ./js/redux/reducers/index.js ***!
   \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "../../node_modules/redux/es/index.js");
+/* harmony import */ var react_router_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-redux */ "../../node_modules/react-router-redux/lib/index.js");
+/* harmony import */ var react_router_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_redux__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _social_media_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./social_media_reducer */ "./js/redux/reducers/social_media_reducer.js");
+/* harmony import */ var _about_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about_reducer */ "./js/redux/reducers/about_reducer.js");
+/* harmony import */ var _contact_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./contact_reducer */ "./js/redux/reducers/contact_reducer.js");
+/* harmony import */ var _project_management_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./project_management_reducer */ "./js/redux/reducers/project_management_reducer.js");
+/* harmony import */ var _gallery_reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./gallery_reducer */ "./js/redux/reducers/gallery_reducer.js");
+/* harmony import */ var _financing_reducer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./financing_reducer */ "./js/redux/reducers/financing_reducer.js");
+/* harmony import */ var _faq_reducer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./faq_reducer */ "./js/redux/reducers/faq_reducer.js");
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
 
-var _redux = __webpack_require__(/*! redux */ "../../node_modules/redux/es/index.js");
 
-var _reactRouterRedux = __webpack_require__(/*! react-router-redux */ "../../node_modules/react-router-redux/lib/index.js");
 
-var _social_media_reducer = __webpack_require__(/*! ./social_media_reducer */ "./js/redux/reducers/social_media_reducer.js");
 
-var _social_media_reducer2 = _interopRequireDefault(_social_media_reducer);
 
-var _about_reducer = __webpack_require__(/*! ./about_reducer */ "./js/redux/reducers/about_reducer.js");
 
-var _about_reducer2 = _interopRequireDefault(_about_reducer);
-
-var _contact_reducer = __webpack_require__(/*! ./contact_reducer */ "./js/redux/reducers/contact_reducer.js");
-
-var _contact_reducer2 = _interopRequireDefault(_contact_reducer);
-
-var _project_management_reducer = __webpack_require__(/*! ./project_management_reducer */ "./js/redux/reducers/project_management_reducer.js");
-
-var _project_management_reducer2 = _interopRequireDefault(_project_management_reducer);
-
-var _gallery_reducer = __webpack_require__(/*! ./gallery_reducer */ "./js/redux/reducers/gallery_reducer.js");
-
-var _gallery_reducer2 = _interopRequireDefault(_gallery_reducer);
-
-var _financing_reducer = __webpack_require__(/*! ./financing_reducer */ "./js/redux/reducers/financing_reducer.js");
-
-var _financing_reducer2 = _interopRequireDefault(_financing_reducer);
-
-var _faq_reducer = __webpack_require__(/*! ./faq_reducer */ "./js/redux/reducers/faq_reducer.js");
-
-var _faq_reducer2 = _interopRequireDefault(_faq_reducer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*
  * We combine all reducers into a single object before updated data is dispatched (sent) to store
@@ -63611,17 +63657,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * There is a reducer for each piece of your state.
  * */
 
-var allReducers = (0, _redux.combineReducers)({
-    social_media: _social_media_reducer2.default,
-    about: _about_reducer2.default,
-    contact: _contact_reducer2.default,
-    project_management: _project_management_reducer2.default,
-    gallery: _gallery_reducer2.default,
-    financing: _financing_reducer2.default,
-    faq: _faq_reducer2.default
+var allReducers = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+    social_media: _social_media_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+    about: _about_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+    contact: _contact_reducer__WEBPACK_IMPORTED_MODULE_4__["default"],
+    project_management: _project_management_reducer__WEBPACK_IMPORTED_MODULE_5__["default"],
+    gallery: _gallery_reducer__WEBPACK_IMPORTED_MODULE_6__["default"],
+    financing: _financing_reducer__WEBPACK_IMPORTED_MODULE_7__["default"],
+    faq: _faq_reducer__WEBPACK_IMPORTED_MODULE_8__["default"]
 });
 
-exports.default = allReducers;
+/* harmony default export */ __webpack_exports__["default"] = (allReducers);
 
 /***/ }),
 
@@ -63629,15 +63675,11 @@ exports.default = allReducers;
 /*!*********************************************************!*\
   !*** ./js/redux/reducers/project_management_reducer.js ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
 function project_management() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
@@ -63645,7 +63687,7 @@ function project_management() {
   return state;
 }
 
-exports.default = project_management;
+/* harmony default export */ __webpack_exports__["default"] = (project_management);
 
 /***/ }),
 
@@ -63653,15 +63695,11 @@ exports.default = project_management;
 /*!***************************************************!*\
   !*** ./js/redux/reducers/social_media_reducer.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+__webpack_require__.r(__webpack_exports__);
 function social_media() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
@@ -63669,7 +63707,7 @@ function social_media() {
   return state;
 }
 
-exports.default = social_media;
+/* harmony default export */ __webpack_exports__["default"] = (social_media);
 
 /***/ }),
 
@@ -63677,57 +63715,43 @@ exports.default = social_media;
 /*!*********************************!*\
   !*** ./js/redux/store/store.js ***!
   \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: store */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "store", function() { return store; });
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "../../node_modules/redux/es/index.js");
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-devtools-extension */ "../../node_modules/redux-devtools-extension/index.js");
+/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "../../node_modules/redux-thunk/lib/index.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-promise-middleware */ "../../node_modules/redux-promise-middleware/dist/es/index.js");
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux-logger */ "../../node_modules/redux-logger/dist/redux-logger.js");
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _reducers_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! _reducers/index */ "./js/redux/reducers/index.js");
+/* harmony import */ var _data_state__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! _data/state */ "../data/state.js");
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.store = undefined;
 
-var _redux = __webpack_require__(/*! redux */ "../../node_modules/redux/es/index.js");
 
-var _reduxDevtoolsExtension = __webpack_require__(/*! redux-devtools-extension */ "../../node_modules/redux-devtools-extension/index.js");
-
-var _reduxThunk = __webpack_require__(/*! redux-thunk */ "../../node_modules/redux-thunk/lib/index.js");
-
-var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
-
-var _reduxPromiseMiddleware = __webpack_require__(/*! redux-promise-middleware */ "../../node_modules/redux-promise-middleware/dist/es/index.js");
-
-var _reduxPromiseMiddleware2 = _interopRequireDefault(_reduxPromiseMiddleware);
-
-var _reduxLogger = __webpack_require__(/*! redux-logger */ "../../node_modules/redux-logger/dist/redux-logger.js");
-
-var _index = __webpack_require__(/*! _reducers/index */ "./js/redux/reducers/index.js");
-
-var _index2 = _interopRequireDefault(_index);
-
-var _state = __webpack_require__(/*! _data/state */ "../data/state.js");
-
-var _state2 = _interopRequireDefault(_state);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Our default state object */
 
 //import { syncHistoryWithStore } from 'react-router-redux';
 //import { browserHistory } from 'react-router';
+
+/* Import the JSON data file */
+
+/* Our default state object */
 var loggerSettings = {
   warning: function warning() {
     return false;
   }
 };
-/* Import the JSON data file */
-
-var middleWare = (0, _reduxDevtoolsExtension.composeWithDevTools)((0, _redux.applyMiddleware)((0, _reduxPromiseMiddleware2.default)(), _reduxThunk2.default, (0, _reduxLogger.createLogger)(loggerSettings)));
-var store = middleWare(_redux.createStore)(_index2.default, _state2.default);
+var middleWare = Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(Object(redux_promise_middleware__WEBPACK_IMPORTED_MODULE_3__["default"])(), redux_thunk__WEBPACK_IMPORTED_MODULE_2___default.a, Object(redux_logger__WEBPACK_IMPORTED_MODULE_4__["createLogger"])(loggerSettings)));
+var store = middleWare(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_index__WEBPACK_IMPORTED_MODULE_5__["default"], _data_state__WEBPACK_IMPORTED_MODULE_6__["default"]);
 //const history = syncHistoryWithStore(browserHistory, store);
 
-exports.store = store;
+
 
 /***/ }),
 
@@ -63735,38 +63759,27 @@ exports.store = store;
 /*!***************************************************!*\
   !*** ./js/redux/thunks/gallery/gallery_thunks.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../../node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_gallery_gallery_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! _actions/gallery/gallery_actions */ "./js/redux/actions/gallery/gallery_actions.js");
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _axios = __webpack_require__(/*! axios */ "../../node_modules/axios/index.js");
-
-var _axios2 = _interopRequireDefault(_axios);
-
-var _gallery_actions = __webpack_require__(/*! _actions/gallery/gallery_actions */ "./js/redux/actions/gallery/gallery_actions.js");
-
-var galleryActions = _interopRequireWildcard(_gallery_actions);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var API_KEY = "067d073d001ed3cf049fb0dc97ab54c6";
 var fetchAlbumPhotos = function fetchAlbumPhotos(albumId) {
   return function (dispatch) {
     var url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + API_KEY + '&photoset_id=' + albumId + '&format=json&nojsoncallback=1';
-    dispatch(galleryActions.fetchAlbumPhotos(_axios2.default.get(url)));
+    dispatch(_actions_gallery_gallery_actions__WEBPACK_IMPORTED_MODULE_1__["fetchAlbumPhotos"](axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(url)));
   };
 };
-exports.default = {
+/* harmony default export */ __webpack_exports__["default"] = ({
   fetchAlbumPhotos: fetchAlbumPhotos
-};
+});
 
 /***/ }),
 
