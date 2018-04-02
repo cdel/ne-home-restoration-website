@@ -123,20 +123,35 @@ const serverConfig = {
         path: path.resolve(__dirname, 'dist/server'),
         libraryTarget: 'commonjs2'
     },
+    resolve: {
+        extensions: [".js", ".jsx"],
+        /* Helps avoid absolute paths */
+        alias: {
+            _components: path.resolve(__dirname, 'src/client/js/react/components'),
+            _containers: path.resolve(__dirname, 'src/client/js/react/containers'),
+            _actions: path.resolve(__dirname, 'src/client/js/redux/actions'),
+            _reducers: path.resolve(__dirname, 'src/client/js/redux/reducers'),
+            _thunks: path.resolve(__dirname, 'src/client/js/redux/thunks'),
+            _selectors: path.resolve(__dirname, 'src/client/js/redux/selectors'),
+            _store: path.resolve(__dirname, 'src/client/js/redux/store'),
+            _data: path.resolve(__dirname, 'src/data'),
+            _utilities: path.resolve(__dirname, 'src/client/js/utilities'),
+            _styles: path.resolve(__dirname, 'src/client/styles'),
+            _assets: path.resolve(__dirname, 'src/client/assets')
+        },
+        modules: [path.resolve(__dirname, "src/client/js"), "node_modules"]
+    },
     module: {
         /* Looks for all sass files being imported by React components */
         rules: [
             {
                 test: /\.scss$/,
                 exclude: /(node_modules|bower_components)/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'sass-loader/locals',
-                        }
-                    ]
-                  })
+                use: [
+                    {
+                        loader: 'css-loader'
+                    }
+                ]
             },
             {
                 test: /\.js/,
@@ -152,4 +167,4 @@ const serverConfig = {
     }
 };
 
-module.exports = [browserConfig];
+module.exports = [browserConfig, serverConfig];
