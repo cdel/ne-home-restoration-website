@@ -1,6 +1,8 @@
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
+
 import App from '_components/App';
 
 const app = express();
@@ -17,7 +19,7 @@ app.get('*', (req, res) => {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="styles/main.css" rel="stylesheet"></head>
       <body>
-        <div id="app">${renderToString(<App />)}</div>
+        <div id="app">${renderToString(<StaticRouter location={req.url} context={{name: 'hi'}}><App /></StaticRouter>)}</div>
       <script type="text/javascript" src="bundle.js"></script></body>
     </html>
   `);

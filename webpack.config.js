@@ -3,12 +3,15 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const autoPrefixer = require('autoprefixer');
 
-const { NODE_ENV } = process.env;
+const isDevelopment = process.env.NODE_ENV === 'development';
+
+// @TODO: Make webpack configuration file DRY by separating out set up.
 
 const browserConfig = {
-    mode: ( NODE_ENV === "development" ) ? "development" : "production",
+    mode: isDevelopment ? "development" : "production",
     /* Sets the entry point directory (All of our source files go into it) */
     context: path.resolve(__dirname, 'src/client'),
     entry: './js/main.js',
@@ -17,7 +20,7 @@ const browserConfig = {
         /* Sets the output point directory (All of our build files go into it) */
         path: path.resolve(__dirname, 'dist/client')
     },
-    devtool: "source-map",
+    devtool: isDevelopment && "source-map",
     resolve: {
         extensions: [".js", ".jsx"],
         /* Helps avoid absolute paths */
@@ -26,6 +29,8 @@ const browserConfig = {
             _containers: path.resolve(__dirname, 'src/client/js/react/containers'),
             _actions: path.resolve(__dirname, 'src/client/js/redux/actions'),
             _reducers: path.resolve(__dirname, 'src/client/js/redux/reducers'),
+            _routes: path.resolve(__dirname, 'src/client/js/react/routes'),
+            _constants: path.resolve(__dirname, 'src/client/js/constants'),
             _thunks: path.resolve(__dirname, 'src/client/js/redux/thunks'),
             _selectors: path.resolve(__dirname, 'src/client/js/redux/selectors'),
             _store: path.resolve(__dirname, 'src/client/js/redux/store'),
@@ -112,7 +117,8 @@ const browserConfig = {
 };
 
 const serverConfig = {
-    mode: "development",
+    mode: isDevelopment ? "development" : "production",
+    devtool: isDevelopment && "source-map",
     /* Sets the entry point directory (All of our source files go into it) */
     context: path.resolve(__dirname, 'src/server'),
     entry: './server.js',
@@ -129,8 +135,10 @@ const serverConfig = {
         alias: {
             _components: path.resolve(__dirname, 'src/client/js/react/components'),
             _containers: path.resolve(__dirname, 'src/client/js/react/containers'),
+            _routes: path.resolve(__dirname, 'src/client/js/react/routes'),
             _actions: path.resolve(__dirname, 'src/client/js/redux/actions'),
             _reducers: path.resolve(__dirname, 'src/client/js/redux/reducers'),
+            _constants: path.resolve(__dirname, 'src/client/js/constants'),
             _thunks: path.resolve(__dirname, 'src/client/js/redux/thunks'),
             _selectors: path.resolve(__dirname, 'src/client/js/redux/selectors'),
             _store: path.resolve(__dirname, 'src/client/js/redux/store'),

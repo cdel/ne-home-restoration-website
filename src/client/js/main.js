@@ -6,9 +6,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from '_components/App';
 import '_styles/main.scss';
 
-ReactDOM.render(
-  <Provider store={store}>
+ReactDOM.hydrate(
+  <Router>
     <App />
-  </Provider>, 
+  </Router>, 
   document.getElementById('app')
 );
