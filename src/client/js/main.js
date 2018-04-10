@@ -7,8 +7,10 @@ import App from '_components/App';
 import '_styles/main.scss';
 
 ReactDOM.hydrate(
+  <Provider store={store}>
   <Router>
     <App />
-  </Router>, 
+  </Router>
+  </Provider>, 
   document.getElementById('app')
 );
