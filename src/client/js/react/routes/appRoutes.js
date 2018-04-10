@@ -4,7 +4,7 @@ import About from '_components/Pages/About';
 import Contact from '_components/Pages/Contact';
 import Faq from '_components/Pages/Faq';
 import Financing from '_components/Pages/Financing';
-import Gallery from '_components/Pages/Gallery';
+import Gallery from '_containers/GalleryPage/GalleryPage_container';
 import PMPage from '_components/Pages/ProjectManagement';
 import NotFound404 from '_components/Pages/NotFound';
 

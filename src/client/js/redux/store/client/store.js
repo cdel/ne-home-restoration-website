@@ -6,14 +6,15 @@ import { createLogger } from 'redux-logger';
 //import { syncHistoryWithStore } from 'react-router-redux';
 //import { browserHistory } from 'react-router';
 import allReducers from '_reducers/index';
-/* Import the JSON data file */
-import defaultState from '_data/state';
+/* Retrieve the preloaded state from the server */
+const preloadedState = window.__PRELOADED_STATE__;
+delete window.__PRELOADED_STATE__;
 /* Our default state object */
 const loggerSettings = {
   warning: () => false
 };
 const middleWare = composeWithDevTools(applyMiddleware(promise(), thunk, createLogger(loggerSettings)));
-const store = middleWare(createStore)(allReducers, defaultState);
+const store = middleWare(createStore)(allReducers, preloadedState);
 //const history = syncHistoryWithStore(browserHistory, store);
 
 export {

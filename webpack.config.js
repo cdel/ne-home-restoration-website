@@ -97,11 +97,6 @@ const browserConfig = {
     plugins: [
         /* Combines all the sass files being imported into one. */
         new ExtractTextPlugin('styles/main.css'),
-        /* Creates our index HTML page in our build */
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'index.html'
-        }),
         /* Copies all the files in source directory assets to production */
         new CopyWebpackPlugin([{
             from: 'assets', to: 'assets'
