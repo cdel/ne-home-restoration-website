@@ -7,6 +7,8 @@ import { StaticRouter } from 'react-router-dom';
 
 import App from '_components/App';
 
+const PORT = process.env.PORT || 3001;
+
 const app = express();
 // Tell our server to serve any static content in this directory
 app.use(express.static('dist/client'));
@@ -25,8 +27,8 @@ app.get('*', (req, res) => {
   res.send(renderFullPage(html, preloadedState));
 });
 
-app.listen(3001, () => {
-  console.log('server running.....');
+app.listen(PORT, () => {
+  console.log(`Server running on port: ${PORT}...`);
 });
 
 function renderFullPage(html, preloadedState) {

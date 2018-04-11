@@ -4,9 +4,11 @@
   "description": "Boilerplate code and files to create React apps with collocated sass files",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --watch --config webpack.config.js",
-    "build-dev": "NODE_ENV=development webpack  --config webpack.config.js",
+    "start": "NODE_ENV=production webpack --config webpack.config.js && node dist/server/server.js",
+    "start-dev": "npm run watch && npm run server",
+    "build-dev": "NODE_ENV=development webpack --config webpack.config.js",
     "build-prod": "NODE_ENV=production webpack --config webpack.config.js",
+    "server": "PORT=3001 && node dist/server/server.js",
     "watch": "NODE_ENV=development webpack --watch --config webpack.config.js"
   },
   "repository": {
