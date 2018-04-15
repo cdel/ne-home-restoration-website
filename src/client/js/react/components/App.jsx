@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from '_routes/appRoutes';
-import Navbar from '_components/Navbar/Navbar';
-import Footer from '_components/Footer/Footer';
+import Page from '_components/Page/Page';
 import './App.scss';
 
 class App extends React.Component {
@@ -14,17 +13,13 @@ class App extends React.Component {
   }
   render() {
     return (
-        <div className="App">
-          <Navbar />
-          <div className="App-wrapper">
-              <Switch>
-                {routes.map((route, index) => (
-                  <Route key={`${route.path ? route.path : `404Page`}-${index}`} {...route} />
-                ))}
-              </Switch>
-          </div>
-          <Footer />
-        </div>
+      <Page>
+        <Switch>
+          {routes.map((route, index) => (
+            <Route key={`${route.path ? route.path : `404Page`}-${index}`} {...route} />
+          ))}
+        </Switch>
+      </Page>
     );
   }
 }

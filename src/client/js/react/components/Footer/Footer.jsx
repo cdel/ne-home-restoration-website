@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Footer = props => {
   return (
-    <h1>This is the footer</h1>
+    <footer><h3>This is the footer</h3></footer>
   );
 }
 
