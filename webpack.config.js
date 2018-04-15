@@ -170,4 +170,4 @@ const serverConfig = {
     }
 };
 
-module.exports = [browserConfig, serverConfig];
+module.exports = [browserConfig];

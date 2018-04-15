@@ -9,6 +9,7 @@
     "build-dev": "NODE_ENV=development webpack --config webpack.config.js",
     "build-prod": "NODE_ENV=production webpack --config webpack.config.js",
     "server": "PORT=3001 && node dist/server/server.js",
+    "server-dev": "NODE_ENV=development webpack-dev-server --watch --config webpack.config.js",
     "watch": "NODE_ENV=development webpack --watch --config webpack.config.js"
   },
   "repository": {
