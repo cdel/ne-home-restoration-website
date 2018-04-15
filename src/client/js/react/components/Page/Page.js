@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '_components/Navbar/Navbar';
+import Navbar from '_containers/Navbar/Navbar_container';
 import Footer from '_containers/Footer/Footer_container';
 
 const Page = ({children}) => (

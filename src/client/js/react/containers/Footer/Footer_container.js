@@ -5,7 +5,7 @@ const currentYear = (new Date()).getUTCFullYear();
 
 function mapStateToProps(state, containerProps) {
   return {
-    owner: state.about.owner,
+    ownerName: state.about.owner.name,
     phoneNumber: state.contact.phoneNumber,
     mediaAccounts: state.mediaAccounts,
     email: state.contact.email,

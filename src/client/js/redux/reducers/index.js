@@ -6,6 +6,7 @@ import contact from './contact_reducer';
 import projectManagement from './project_management_reducer';
 import gallery from './gallery_reducer';
 import financing from './financing_reducer';
+import pages from './pages_reducer';
 import faq from './faq_reducer';
 /*
  * We combine all reducers into a single object before updated data is dispatched (sent) to store
@@ -20,7 +21,8 @@ const allReducers = combineReducers({
     projectManagement,
     gallery,
     financing,
-    faq
+    faq,
+    pages
 });
 
 export default allReducers;

@@ -7,6 +7,7 @@ const Footer = props => {
     <footer className="Footer">
       <div className="Footer-contactUs">
         <h3>Contact Us</h3>
+        <p>{props.ownerName}</p>
         <ul>
           <li><span>Hours: </span>{props.businessHours}</li>
           <li><span>Email: </span>{props.email}</li>
@@ -23,17 +24,23 @@ const Footer = props => {
         <span>Our Mission: </span>
         <p>{props.companyMission}</p>
       </div>
-      <p className="Footer-attribution">
-        Copyright © {props.currentYear}. New England Home Restoration. All Rights Reserved
-      </p>
-      <ul>
-        {props.licenses.map(license => (
-          <li key={license.licenseId}>
-            <span>{license.name}</span>
-            <span>{license.licenseId}</span>
-          </li>
-        ))}  
-      </ul>
+      <div className="Footer-navigate">
+        <h3 className="Footer-title">Navigate</h3>
+        <ul className="Footer-navigation"></ul>
+      </div>
+      <div className="Footer-attribution">
+        <p className="Footer-attribution">
+          Copyright © {props.currentYear}. New England Home Restoration. All Rights Reserved
+        </p>
+        <ul>
+          {props.licenses.map(license => (
+            <li key={license.licenseId}>
+              <span>{license.name}</span>
+              <span>{license.licenseId}</span>
+            </li>
+          ))}  
+        </ul>
+      </div>
     </footer>
   );
 }
