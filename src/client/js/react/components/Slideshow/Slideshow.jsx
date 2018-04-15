@@ -18,6 +18,7 @@ class Slideshow extends React.Component {
       this.setState({activePhoto: selectedPhoto, direction: event.direction});
     };
     this.togglePreview = () => {
+      if (!this.props.allowPreview) return;
       this.setState(prevState => ({isPreviewOpen: !prevState.isPreviewOpen}));
     };
   }
@@ -33,6 +34,7 @@ class Slideshow extends React.Component {
           activeIndex={activePhoto}
           direction={direction}
           onSelect={this.handleSelect}
+          indicators={this.props.showIndicators}
         >
         {photos.length ? (
           photos.map((photo, index) => (
@@ -40,12 +42,14 @@ class Slideshow extends React.Component {
               <div className="Slideshow-imageWrapper" style={{height: `${height}px`}}>
                 <img onClick={this.togglePreview} alt={photo.alt} src={photo.src} />
               </div>
-              <Carousel.Caption>
-                <h3>{photo.alt}</h3>
-                {photo.description && (
-                  <p>{photo.description}</p>
-                )}
-              </Carousel.Caption>
+              {this.props.showCaption && (
+                <Carousel.Caption>
+                  <h3>{photo.alt}</h3>
+                  {photo.description && (
+                    <p>{photo.description}</p>
+                  )}
+                </Carousel.Caption>
+              )}
             </Carousel.Item>
           ))
         ) : (
@@ -64,10 +68,16 @@ class Slideshow extends React.Component {
 }
 
 Slideshow.defaultProps = {
-  height: 500
+  height: 500,
+  showIndicators: true,
+  allowPreview: true,
+  showCaption: true
 };
 
 Slideshow.propTypes = {
+  showIndicators: PropTypes.bool,
+  showCaption: PropTypes.bool,
+  allowPreview: PropTypes.bool,
   height: PropTypes.number,
   photos: PropTypes.arrayOf(PropTypes.shape({src: PropTypes.string, alt: PropTypes.string})).isRequired,
 }

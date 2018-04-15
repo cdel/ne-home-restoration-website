@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './footer.scss';
 
 const Footer = props => {
@@ -10,7 +11,7 @@ const Footer = props => {
         <p>{props.ownerName}</p>
         <ul>
           <li><span>Hours: </span>{props.businessHours}</li>
-          <li><span>Email: </span>{props.email}</li>
+          <li><span>Email: </span><a href={`emailto:${props.email}`}>{props.email}</a></li>
           <li><span>Phone: </span><a href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a></li>
         </ul>
         <div>
@@ -26,7 +27,13 @@ const Footer = props => {
       </div>
       <div className="Footer-navigate">
         <h3 className="Footer-title">Navigate</h3>
-        <ul className="Footer-navigation"></ul>
+        <ul className="Footer-navigation">
+          {props.pages.map(page => (
+            <li key={page.name}>
+              <Link to={page.url}>{page.name}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="Footer-attribution">
         <p className="Footer-attribution">

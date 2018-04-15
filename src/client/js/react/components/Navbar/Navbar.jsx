@@ -7,7 +7,12 @@ import './Navbar.scss';
 const NavigationBar = (props) => {
   return (
     <header className="Navbar">
-      <div className="Navbar-socialMedia">
+      <div className="Navbar-banner">
+        <p className="Navar-banner-message">
+          Call Us Today At: <a href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a>
+          <span className="Navbar-banner-submessage">Free no obligation consulations</span>
+        </p>
+        <div className="Navbar-socialMedia">
         <ul>
           {props.mediaAccounts.map(account => (
             <li key={account.name} className="Navbar-socialMedia-account">
@@ -15,6 +20,7 @@ const NavigationBar = (props) => {
             </li>
           ))}
         </ul>
+      </div>
       </div>
       <figure className="Navbar-logo">
         <Image src="assets/logo/NEHomeRest_logo.png" alt="React Boilerplate" responsive />

@@ -139,7 +139,7 @@ const state = {
       url: '/faq'
     },
     {
-      name: 'financing',
+      name: 'Financing',
       url: '/financing'
     },
     {
