@@ -1,9 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './footer.scss';
 
 const Footer = props => {
   return (
-    <footer><h3>This is the footer</h3></footer>
+    <footer className="Footer">
+      <div className="Footer-contactUs">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><span>Hours: </span>{props.businessHours}</li>
+          <li><span>Email: </span>{props.email}</li>
+          <li><span>Phone: </span><a href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a></li>
+        </ul>
+        <div>
+          {props.mediaAccounts.map(account => (
+              <a key={account.name} href={account.url} target="_blank" title={account.name}>{account.name}</a>
+          ))}  
+        </div>
+      </div>
+      <div className="Footer-aboutUs">
+        <h3 className="Footer-title">About Us</h3>
+        <span>Our Mission: </span>
+        <p>{props.companyMission}</p>
+      </div>
+      <p className="Footer-attribution">
+        Copyright © {props.currentYear}. New England Home Restoration. All Rights Reserved
+      </p>
+      <ul>
+        {props.licenses.map(license => (
+          <li key={license.licenseId}>
+            <span>{license.name}</span>
+            <span>{license.licenseId}</span>
+          </li>
+        ))}  
+      </ul>
+    </footer>
   );
 }
 

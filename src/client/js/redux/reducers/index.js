@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 import { routerReducer } from 'react-router-redux';
-import social_media from './social_media_reducer';
+import mediaAccounts from './social_media_reducer';
 import about from './about_reducer';
 import contact from './contact_reducer';
-import project_management from './project_management_reducer';
+import projectManagement from './project_management_reducer';
 import gallery from './gallery_reducer';
 import financing from './financing_reducer';
 import faq from './faq_reducer';
@@ -14,10 +14,10 @@ import faq from './faq_reducer';
  * */
 
 const allReducers = combineReducers({
-    social_media,
+    mediaAccounts,
     about,
     contact,
-    project_management,
+    projectManagement,
     gallery,
     financing,
     faq

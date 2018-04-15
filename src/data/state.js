@@ -1,14 +1,16 @@
 const state = {
-  social_media: {
-    facebook: {
+  mediaAccounts: [
+    {
+      name: "Facebook",
       username: "newenglandhomerestoration",
       url: "https://www.facebook.com/New-England-Home-Restoration-1116943771718268/"
     },
-    instagram: {
+    {
+      name: "Instagram",
       username: "newenglandhomerestoration",
       url: "https://www.instagram.com/newenglandhomerestoration/"
     }
-  },
+  ],
   about: {
     owner: {
       name: "Andre LeBlanc",
@@ -20,17 +22,18 @@ const state = {
     }
   },
   contact: {
-    phone_number: "781-800-0121",
+    phoneNumber: "781-800-0121",
     email: "Office@NewEnglandHomeRestoration.com",
+    businessHours: "Monday to Friday (7AM to 5PM)",
     areas_served: ["Acton", "Arlington", "Bedford", "Belmont", "Bolton", "Boston", "Boxborough", "Brookline", "Burlington", "Brookline", "Cambridge", "Dedham", "Framingham", "Harvard", "Hudson", "Lexington", "Littleton", "Lynnfield", "Malden", "Malborough", "Maynard", "Medford", "Melrose", "Milton", "Nahant", "Natick", "Needham", "Newton", "Norfolk", "Northborough", "North Reading", "Norton", "Norwood", "Reading", "Salem", "Somerville", "Stoneham", "Stow", "Wakefield", "Waltham", "Watertown", "Westborough", "Wellesley", "Weymouth", "Wilmington", "Winchester", "Woburn"],
     licenses: [
       {
        name: "Home Improvement Contractor (MA)",
-       license_id: 185354,
+       licenseId: 185354,
       },
       {
         name: "Massachusetts Dept of Public Safety License",
-        license_id: "CSFA-106295"
+        licenseId: "CSFA-106295"
       }
     ],
     accreditation: [
@@ -46,7 +49,7 @@ const state = {
     insurances: ["Mass. Workesr' Compensation", "General Liability Insurance"],
     payments: ["Cash", "Credit/Debit", "Check", "Financing"]
   },
-  project_management: {
+  projectManagement: {
     description: "At New England Home Restoration, our online system gives you easy access to everything about your project. You can make selections, see progress, browse photos, review financial decisions, send messages, and more. All from any computer, tablet, or smartphone.",
     benefits: [],
     video_src: "https://player.vimeo.com/video/207894066?title=0&byline=0&portrait=0"
