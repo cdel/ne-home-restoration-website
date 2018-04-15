@@ -90,7 +90,7 @@ const state = {
     description: "We offer financing through GreenSky!"
   },
   faq: {
-    title: "New England Home Restoration’s Most Frequently Asked Questions",
+    title: "Frequently Asked Questions",
     description: "At New England Home Restoration. We take the time to explain the details about the services you request. We answer all of your questions politely and explain our estimates for your home improvement project to your satisfaction. We believe an educated client is our best customer so we’ve provided this page of Common Questions for your benefit.",
     faqs: [
       {
