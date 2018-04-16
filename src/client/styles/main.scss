@@ -1,6 +1,4 @@
-@import '/modules/_tints';
-@import '/modules/_fonts';
-@import '/modules/_colors';
-@import '/partials/_reset';
-@import '/modules/_utility';
-@import '/bootstraps/bootstrap';
+@import 'variables/_variables';
+@import 'partials/_reset';
+@import 'modules/_utility';
+@import 'bootstraps/_bootstrap';

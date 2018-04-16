@@ -1,0 +1,13 @@
+@mixin Breakpoint(
+
+  $Breakpoint: null
+  ) {
+
+@media screen and (min-width:
+$Breakpoint) {
+
+@content;
+
+}
+
+}

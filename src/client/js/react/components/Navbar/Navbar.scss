@@ -1,9 +1,13 @@
+@import '~_styles/variables/_variables';
+
 .Navbar {
   border: 1px solid black;
   margin-bottom: 16px;
   &-logo {
-    max-width: 150px;
-    padding: 15px 0;
-    margin: 0 auto;
+    max-width: 300px;
+  }
+  &-banner {
+    text-align: center;
+    color: $tertiary-beige;
   }
 }
