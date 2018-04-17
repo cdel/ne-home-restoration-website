@@ -28,6 +28,7 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
       display: block;
       font-style: italic;
       letter-spacing: 2px;
+      font-size: $font-size--1000;
     }
     &-tel {
       color: $tertiary-beige;
@@ -169,6 +170,16 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
     }
     @include Breakpoint($bp--larger) {
       height: 100px;
+      &--isStickying {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: top .3s ease-in;
+        transform: translate3d(0,0,0);
+        box-shadow: $box-shadow;
+        z-index: 99;
+      }
     }
     @include Breakpoint($bp--large) {
       flex-direction: column;
@@ -183,16 +194,6 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
         .Navbar-header-navigation-menu, {
           display: flex;
         }
-      }
-      &--isStickying {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        transition: top .3s ease-in;
-        transform: translate3d(0,0,0);
-        box-shadow: $box-shadow;
-        z-index: 99;
       }
     }
   }
