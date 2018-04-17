@@ -26,17 +26,17 @@ export const PageSection = (props) => {
 }
 
 export const SectionCard = props => {
-  const {title, children, textAlignment, background, subTitle} = props;
+  const {title, children, textAlignment, background, icon} = props;
   return (
-    <PageSection fluid>
+    <PageSection>
       <div className={cx("Page-sectionCard-content", {
         'Page-sectionCard-content--overlay': !!background,
         [`Page-sectionCard-content--align${textAlignment}`]: !!textAlignment
       })}>
         <div className="Page-sectionCard-titleWrapper">
           <h2 className="Page-sectionCard-title">{title}</h2>
-          {subTitle && (
-            <h3 className="Page-sectionCard-title">{subTtile}</h3>
+          {icon && (
+            <span className={`${icon} Page-sectionCard-iconWrapper`}></span>
           )}
         </div>
         {children}

@@ -11,7 +11,7 @@ const HomePage = props => {
   return (
     <div className="HomePage">
       <Slideshow photos={photos} showCaption={false} height={showCaseHeight} />
-      <SectionCard title="Our Mission">
+      <SectionCard title="Our Mission" icon="glyphicon glyphicon-eye-open">
         <p>Hello World!</p>
         <ContactForm />
       </SectionCard>
