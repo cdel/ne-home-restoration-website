@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {PageSection} from '_components/Page/Page';
 import {PanelGroup, Panel, PageHeader} from 'react-bootstrap';
 
 const FaqPage = ({faqs, title, description}) => {
   return (
-    <div className="FaqPage">
+    <PageSection>
       <PageHeader><p>{title} <span className="glyphicon glyphicon-question-sign"></span></p></PageHeader>
       <p>{description}</p>
       <div className="FaqPage-faqs">
@@ -23,7 +24,7 @@ const FaqPage = ({faqs, title, description}) => {
           ))}
         </PanelGroup>
       </div>
-    </div>
+    </PageSection>
   );
 }
 
