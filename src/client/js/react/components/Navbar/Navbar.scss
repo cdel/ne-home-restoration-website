@@ -45,16 +45,22 @@
     }
   }
   &-header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: 150px;
+    overflow: hidden;
     @include Breakpoint($bp--larger) {
       height: 100px;
     }
     @include Breakpoint($bp--large) {
       flex-direction: column;
       justify-content: center;
-      height: auto;
+      height: initial;
+    }
+    @include Breakpoint($bp--medium) {
+      justify-content: space-between;
+      flex-direction: row;
     }
     &-logo {
       &-image {
@@ -71,6 +77,9 @@
           padding: 0;
           margin: 0 auto; // center logo
         }
+        @include Breakpoint($bp--medium) {
+          margin: 0; // prevents from centering.
+        }
       }
     }
     &-navigation {
@@ -79,9 +88,16 @@
         height: 100%;
         white-space: nowrap;
         margin: 0; // Reset...
+        background: $white;
         @include Breakpoint($bp--large) {
           justify-content: center;
-          height: 50px;
+        }
+        @include Breakpoint($bp--medium) {
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+          top: 100%;
+          left: 0;
         }
         &-item,
         &-link {
@@ -117,6 +133,17 @@
           }
         }
       }
+      @include Breakpoint($bp--large) {
+        height: 50px;
+      }
+      @include Breakpoint($bp--medium) {
+        border: 1px solid red;
+        height: initial;
+        width: 100px;
+      }
+    }
+    &--expanded {
+      overflow: visible;
     }
   }
 }
