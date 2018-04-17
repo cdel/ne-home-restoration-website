@@ -116,10 +116,16 @@ const Footer = props => {
               </span>
             </h6>
             <ul className="Footer-contactList">
-              <li><i className="glyphicon glyphicon-user"></i>{props.ownerName}</li>
-              <li><i className="glyphicon glyphicon-time" aria-label="Business Hours"> </i>{props.businessHours}</li>
-              <li><i className="glyphicon glyphicon-envelope"> </i><a href={`emailto:${props.email}`}>{props.email}</a></li>
-              <li><i className="glyphicon glyphicon-phone-alt"> </i><a href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a></li>
+              <li><i className="glyphicon glyphicon-user" aria-label="Owner"></i>{props.ownerName}</li>
+              <li><i className="glyphicon glyphicon-time" aria-label="Business Hours"></i>{props.businessHours}</li>
+              <li><i className="glyphicon glyphicon-envelope" aria-label="Email Address"></i><a href={`emailto:${props.email}`}>{props.email}</a></li>
+              <li><i className="glyphicon glyphicon-phone-alt" aria-label="Phone Number"></i><a href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a></li>
+              {props.licenses.map(license => (
+                <li key={license.licenseId}>
+                  <i className="glyphicon glyphicon-ok" aria-label="Phone Number"></i>
+                  {license.name} {license.licenseId}
+                </li>
+              ))}  
             </ul>
           </Col>      
         </Row>
