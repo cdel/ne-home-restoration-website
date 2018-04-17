@@ -70,11 +70,13 @@ class NavigationBar extends React.Component {
     return (
       <header ref={this.getHeaderRef} className="Navbar" style={styles}>
         <div className="Navbar-banner" ref={this.getBannerRef}>
-          <p className="Navar-banner-message">
+          <p className="Navbar-banner-message">
             Call Us Today At: <a className="Navbar-banner-tel" href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a>
             <span className="Navbar-banner-submessage">"Free no obligation consulations"</span>
           </p>
-          <MediaAccounts accounts={props.mediaAccounts} />
+          <div className="Navbar-banner-mediaAccounts">
+            <MediaAccounts accounts={props.mediaAccounts} />
+          </div>
         </div>
         <div ref={this.getHeaderContentRef} className={cx('Navbar-header', {
             'Navbar-header--expanded': isExpanded,

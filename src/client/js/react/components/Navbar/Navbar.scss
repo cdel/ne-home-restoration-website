@@ -12,22 +12,25 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
   background: $white;
   &-banner {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     font-size: $font-size--2000;
     text-align: center;
     font-weight: bold;
     color: $white;
     background: $primary-teal;
-    padding: 8px 4px;
+    padding: 8px 16px;
     &-message {
       white-space: nowrap;
+      flex-grow: 1;
+    }
+    &-mediaAccounts {
+      flex-grow: 0;
     }
     &-submessage {
-      flex-grow: 1;
+      display: block;
       margin-top: 4px;
       font-weight: 300;
-      display: block;
       font-style: italic;
       letter-spacing: 2px;
       font-size: $font-size--1000;
@@ -52,20 +55,22 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
       &-image {
         height: 100%;
         width: auto;
+        margin: 0 auto; // center image
       }
       &-wrapper {
         height: 100%;
         padding: 0 16px;
         margin-left: 32px;
         @include Breakpoint($bp--large) {
+          display: inline-flex;
           height: 100px;
           margin-left: 0;
           padding: 0;
-          margin: 0 auto; // center logo
         }
       }
     }
     &-navigation {
+      height: 100%;
       &-toggle {
         display: none;
         background: none;
@@ -79,6 +84,7 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
       }
       &-menu {
         display: flex;
+        align-items: stretch;
         height: 100%;
         white-space: nowrap;
         margin: 0; // Reset...
@@ -156,6 +162,8 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
           &-link,
           &-item {
             padding: 4px 0;
+            height: initial;
+            align-items: stretch;
           }
         }
       }
