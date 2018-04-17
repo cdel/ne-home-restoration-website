@@ -6,8 +6,6 @@ import MediaAccounts from '_components/MediaAccounts/MediaAccounts';
 import cx from '_utilities/classnames';
 import './Navbar.scss';
 
-const OFFSET = 20;
-
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props);

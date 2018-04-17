@@ -36,21 +36,7 @@ const Footer = props => {
             </h6>
             <p className="Footer-content-description">{props.companyMission}</p>
           </Col>
-          <Col md={2} lg={2} xl={2} className="Footer-column">
-            <h6 className="Footer-content-title">
-              <span className="Footer-content-title-text">
-                Quick Links
-              </span>
-            </h6>
-            <ul className="Footer-navigation">
-              {props.pages.map(page => (
-                <li key={page.name}>
-                  <Link to={page.url}>{page.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </Col>
-          <Col md={4} lg={4} xl={4} className="Footer-column">
+          <Col md={5} lg={4} xl={5} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
                 Contanct Us
@@ -68,7 +54,21 @@ const Footer = props => {
                 </li>
               ))}  
             </ul>
-          </Col>      
+          </Col>
+          <Col md={4} lg={2} xl={2} className="Footer-column">
+            <h6 className="Footer-content-title">
+              <span className="Footer-content-title-text">
+                Quick Links
+              </span>
+            </h6>
+            <ul className="Footer-navigation">
+              {props.pages.map(page => (
+                <li key={page.name}>
+                  <Link to={page.url}>{page.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </Col>   
         </Row>
       </Grid>
     </div>
