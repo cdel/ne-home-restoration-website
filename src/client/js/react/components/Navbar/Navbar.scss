@@ -175,7 +175,7 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
         top: 0;
         left: 0;
         width: 100%;
-        transition: top .3s ease-in;
+        transition: top .3s linear;
         transform: translate3d(0,0,0);
         box-shadow: $box-shadow;
         z-index: 99;
