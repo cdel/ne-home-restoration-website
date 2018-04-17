@@ -18,16 +18,19 @@ class NavigationBar extends React.Component {
       this.setState(currState => ({
         isExpanded: !currState.isExpanded
       }));
-    }
+    };
     this.getHeaderRef = ref => {
       this.headerRef = ref;
       this.setState({
         height: this.headerRef.clientHeight
       });
-    }
+    };
     this.getHeaderContentRef = ref => {
       this.headerContentRef = ref;
-    }
+    };
+    this.getBannerRef = ref => {
+      this.bannerRef = ref;
+    };
     this.handleScroll = (e) => {
       const isStickying = window.scrollY >= this.headerRef.clientHeight;
       if (this.state.isStickying !== isStickying) {
@@ -37,7 +40,7 @@ class NavigationBar extends React.Component {
       }
     };
     this.handleResize = (e) => {
-      const height = this.headerContentRef.clientHeight;
+      const height = this.headerContentRef.offsetHeight + this.bannerRef.offsetHeight;
       if (height !== this.state.height) {
         this.setState({
           height
@@ -53,20 +56,20 @@ class NavigationBar extends React.Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('resize', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   render() {
     const props = this.props;
     const {isExpanded, height, isStickying} = this.state;
-    const styles = isStickying ? {height} : {};
+    const styles = {height};
     return (
       <header ref={this.getHeaderRef} className="Navbar" style={styles}>
-        <div className="Navbar-banner">
+        <div className="Navbar-banner" ref={this.getBannerRef}>
           <p className="Navar-banner-message">
             Call Us Today At: <a className="Navbar-banner-tel" href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a>
             <span className="Navbar-banner-submessage">"Free no obligation consulations"</span>
