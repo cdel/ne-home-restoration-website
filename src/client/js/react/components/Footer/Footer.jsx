@@ -88,17 +88,21 @@ const Footer = props => {
       <Grid> 
         <Row>
           <Col md={3} lg={4} xl={3}>
-            <h6 className="Footer-content-title">Company name</h6>
-            <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" data-style="width: 60px;" />
+            <h6 className="Footer-content-title">
+              <span className="Footer-content-title-text">
+                Company name
+              </span>
+            </h6>
             <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
               amet, consectetur adipisicing elit.
             </p>
           </Col>
           <Col md={2} lg={2} xl={2}>
-            <h6 className="text-uppercase font-weight-bold">
-              <strong>Products</strong>
+            <h6 className="Footer-content-title">
+              <span className="Footer-content-title-text">
+                Products
+              </span>
             </h6>
-            <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" data-style="width: 60px;" />
             <p>
               <a href="#!" className="dark-grey-text">MDBootstrap</a>
             </p>
@@ -113,10 +117,11 @@ const Footer = props => {
             </p>
           </Col>
           <Col md={4} lg={3} xl={3}>
-            <h6 className="text-uppercase font-weight-bold">
-              <strong>Contact</strong>
+            <h6 className="Footer-content-title">
+              <span className="Footer-content-title-text">
+                Contanct
+              </span>
             </h6>
-            <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" data-style="width: 60px;" />
             <p>
               <i className="fa fa-home mr-3"></i> New York, NY 10012, US
             </p>
