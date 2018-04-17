@@ -62,6 +62,10 @@ const state = {
       fetching: false,
       fetched: false
     },
+    panoramic: {
+      name: "Panoramic",
+      photos: ["assets/showcase/bathroom_remodeling_ne_belmont-1.jpg", "assets/showcase/bathroom_remodeling_ne_belmont-2.jpg", "assets/showcase/kitchen_remodeling_ne_belmont-1.jpg", "assets/showcase/kitchen_remodeling_ne_belmont-2.jpg", "assets/showcase/livingroom_remodeling_ne_belmont-1.jpg"]
+    },
     albums: [
       {
         name: "Bathrooms",
