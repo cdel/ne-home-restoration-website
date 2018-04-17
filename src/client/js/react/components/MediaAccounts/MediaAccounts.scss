@@ -1,3 +1,6 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
 .MediaAccounts {
   display: flex;
   flex-grow: 0;
@@ -7,7 +10,7 @@
     width: 50px;
     height: 50px;
     overflow: hidden;
-    border: 1px solid $white;
+    margin: 0 4px;
   }
   &--stack {
     flex-direction: column;

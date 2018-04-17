@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Image } from 'react-bootstrap';
+import MediaAccounts from '_components/MediaAccounts/MediaAccounts';
 import cx from '_utilities/classnames';
 import './Navbar.scss';
 
@@ -62,13 +63,7 @@ class NavigationBar extends React.Component {
             Call Us Today At: <a className="Navbar-banner-tel" href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a>
             <span className="Navbar-banner-submessage">"Free no obligation consulations"</span>
           </p>
-          <ul className="Navbar-banner-socialMedia">
-            {props.mediaAccounts.map(account => (
-              <li key={account.name} className="Navbar-banner-socialMedia-account">
-                <a href={account.url} target="_blank" title={account.name}>{account.name}</a>
-              </li>
-            ))}
-          </ul>
+          <MediaAccounts accounts={props.mediaAccounts} />
         </div>
         <div ref={this.getHeaderContentRef} className={cx('Navbar-header', {
             'Navbar-header--expanded': isExpanded,

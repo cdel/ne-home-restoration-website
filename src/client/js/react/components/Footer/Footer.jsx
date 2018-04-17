@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {Grid, Row, Col} from 'react-bootstrap';
+import MediaAccounts from '_components/MediaAccounts/MediaAccounts';
 import './footer.scss';
 
 const Footer = props => {  
@@ -10,27 +11,13 @@ const Footer = props => {
     <div className="Footer-socialMediaBar">
       <Grid> 
         <Row>
-          <Col xs={12} md={5}>
+          <Col xs={12} md={10} className="Footer-column">
             <p className="Footer-socialMediaBar-message">
               Follow our work on social media!
             </p>
           </Col>
-          <Col xs={12} md={7}>
-            <a className="fb-ic ml-0">
-              <i className="fa fa-facebook white-text mr-lg-4"> </i>
-              </a>
-              <a className="tw-ic">
-              <i className="fa fa-twitter white-text mr-lg-4"> </i>
-              </a>
-              <a className="gplus-ic">
-              <i className="fa fa-google-plus white-text mr-lg-4"> </i>
-              </a>
-              <a className="li-ic">
-              <i className="fa fa-linkedin white-text mr-lg-4"> </i>
-              </a>
-              <a className="ins-ic">
-              <i className="fa fa-instagram white-text mr-lg-4"> </i>
-            </a>
+          <Col xs={12} md={2} className="Footer-column">
+            <MediaAccounts accounts={props.mediaAccounts} />
           </Col>
         </Row>
       </Grid>
