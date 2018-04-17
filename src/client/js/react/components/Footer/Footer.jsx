@@ -60,9 +60,9 @@ const Footer = props => {
       <Grid> 
         <Row>
           <Col xs={12} md={5}>
-            <h6 className="mb-0 white-text text-center text-md-left">
-                <strong>Get connected with us on social networks!</strong>
-            </h6>
+            <p className="Footer-socialMediaBar-message">
+              Follow our work on social media!
+            </p>
           </Col>
           <Col xs={12} md={7}>
             <a className="fb-ic ml-0">
@@ -87,7 +87,7 @@ const Footer = props => {
     <div className="Footer-content">
       <Grid> 
         <Row>
-          <Col md={3} lg={4} xl={3}>
+          <Col md={3} lg={4} xl={3} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
                 Company name
@@ -97,43 +97,32 @@ const Footer = props => {
               amet, consectetur adipisicing elit.
             </p>
           </Col>
-          <Col md={2} lg={2} xl={2}>
+          <Col md={2} lg={2} xl={2} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
                 Products
               </span>
             </h6>
-            <p>
-              <a href="#!" className="dark-grey-text">MDBootstrap</a>
-            </p>
-            <p>
-              <a href="#!" className="dark-grey-text">MDWordPress</a>
-            </p>
-            <p>
-              <a href="#!" className="dark-grey-text">BrandFlow</a>
-            </p>
-            <p>
-              <a href="#!" className="dark-grey-text">Bootstrap Angular</a>
-            </p>
+            <ul className="Footer-navigation">
+              {props.pages.map(page => (
+                <li key={page.name}>
+                  <Link to={page.url}>{page.name}</Link>
+                </li>
+              ))}
+            </ul>
           </Col>
-          <Col md={4} lg={3} xl={3}>
+          <Col md={4} lg={4} xl={4} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
                 Contanct
               </span>
             </h6>
-            <p>
-              <i className="fa fa-home mr-3"></i> New York, NY 10012, US
-            </p>
-            <p>
-              <i className="fa fa-envelope mr-3"></i> info@example.com
-            </p>
-            <p>
-              <i className="fa fa-phone mr-3"></i> + 01 234 567 88
-            </p>
-            <p>
-              <i className="fa fa-print mr-3"></i> + 01 234 567 89
-            </p>
+            <ul className="Footer-contactList">
+              <li><i className="glyphicon glyphicon-user"></i>{props.ownerName}</li>
+              <li><i className="glyphicon glyphicon-time" aria-label="Business Hours"> </i>{props.businessHours}</li>
+              <li><i className="glyphicon glyphicon-envelope"> </i><a href={`emailto:${props.email}`}>{props.email}</a></li>
+              <li><i className="glyphicon glyphicon-phone-alt"> </i><a href={`tel:${props.phoneNumber}`}>{props.phoneNumber}</a></li>
+            </ul>
           </Col>      
         </Row>
       </Grid>
@@ -141,10 +130,9 @@ const Footer = props => {
     <div className="Footer-attribution">
       <Grid>
         <Col xs={12}>
-          © 2018 Copyright:
-          <a href="https://mdbootstrap.com/material-design-for-bootstrap/">
-          <strong> MDBootstrap.com</strong>
-          </a>
+          <p>
+            Copyright © {props.currentYear}. New England Home Restoration. All Rights Reserved
+          </p>
         </Col>
       </Grid>
     </div>

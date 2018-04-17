@@ -9,13 +9,14 @@
       font-weight: 500;
       text-transform: uppercase;
       margin-bottom: 12px;
+      color: $brand-darkgrey;
       &-text {
         display: inline-block;
         padding-bottom: 8px;
         border-bottom: 3px solid $primary-teal;
         &:hover {
-          border-color: $tertiary-beige;
-          transition: border-color .2s linear;
+          border-color: $orange;
+          transition: border-color .2s ease-out;
         }
       }
     }
@@ -24,10 +25,25 @@
     color: $white;
     padding: 16px 0;
     background: $secondary-grey--light;
+    text-align: center;
   }
   &-socialMediaBar {
     color: $white;
     background: $primary-teal--light;
     padding: 16px 0;
+    &-message {
+      font-size: $font-size--1000;
+      color: $white;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+  }
+  &-contactList {
+    > li > i {
+      margin-right: 8px;
+    }
+  }
+  &-column {
+    padding: 8px 0;
   }
 }
