@@ -1,3 +1,15 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
 .Footer {
-  color: green;
+  &-attribution {
+    color: $white;
+    padding: 16px 0;
+    background: $secondary-grey--light;
+  }
+  &-socialMediaBar {
+    color: $white;
+    background: $primary-teal--light;
+    padding: 16px 0;
+  }
 }
