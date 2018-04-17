@@ -41,6 +41,12 @@ class NavigationBar extends React.Component {
             <img className="Navbar-header-logo-image" src="assets/logo/NEHomeRest_logo.png" alt="New England Home Restoration"/>
           </figure>
           <nav className="Navbar-header-navigation" onClick={this.toggleMenu}>
+            <button className="Navbar-header-navigation-toggle">
+              <span className={cx('Navbar-header-navigation-toggle-icon', {
+                'glyphicon glyphicon-remove': this.state.isExpanded,
+                'glyphicon glyphicon-align-justify': !this.state.isExpanded
+              })}></span>
+            </button>
             <ul className="Navbar-header-navigation-menu">
               {props.pages.map(page => (
                 <li key={page.name} className="Navbar-header-navigation-menu-item">
