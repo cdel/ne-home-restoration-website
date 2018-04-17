@@ -12,7 +12,7 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20p
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: $font-size--4000;
+    font-size: $font-size--2000;
     text-align: center;
     font-weight: bold;
     color: $white;
@@ -135,16 +135,16 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20p
         }
         &-text {
           color: $secondary-grey;
-          font-size: $font-size--4000;
+          font-size: $font-size--2000;
           display: inline-block;
           margin: 0 16px;
           text-transform: uppercase;
           padding-bottom: 8px; // prevents jumpiness for when border is added.
           @include Breakpoint($bp--larger) {
-            font-size: $font-size--3000;
+            font-size: $font-size--1000;
           }
           @include Breakpoint($bp--large) {
-            font-size: $font-size--3000;
+            font-size: $font-size--1000;
           }
         }
       }

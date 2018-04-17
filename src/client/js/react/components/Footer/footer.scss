@@ -2,6 +2,13 @@
 @import '~_styles/mixins/_global_mixins';
 
 .Footer {
+  &-content {
+    padding: 16px 0;
+    &-title {
+      font-size: $font-size--2000;
+      font-weight: 500;
+    }
+  }
   &-attribution {
     color: $white;
     padding: 16px 0;

@@ -88,9 +88,7 @@ const Footer = props => {
       <Grid> 
         <Row>
           <Col md={3} lg={4} xl={3}>
-            <h6 className="text-uppercase font-weight-bold">
-              <strong>Company name</strong>
-            </h6>
+            <h6 className="Footer-content-title">Company name</h6>
             <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" data-style="width: 60px;" />
             <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
               amet, consectetur adipisicing elit.
