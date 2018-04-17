@@ -90,17 +90,15 @@ const Footer = props => {
           <Col md={3} lg={4} xl={3} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
-                Company name
+                Our Mission
               </span>
             </h6>
-            <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit.
-            </p>
+            <p className="Footer-content-description">{props.companyMission}</p>
           </Col>
           <Col md={2} lg={2} xl={2} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
-                Products
+                Quick Links
               </span>
             </h6>
             <ul className="Footer-navigation">
@@ -114,7 +112,7 @@ const Footer = props => {
           <Col md={4} lg={4} xl={4} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
-                Contanct
+                Contanct Us
               </span>
             </h6>
             <ul className="Footer-contactList">

@@ -20,6 +20,10 @@
         }
       }
     }
+    &-description {
+      max-height: 150px;
+      overflow: hidden;
+    }
   }
   &-attribution {
     color: $white;
