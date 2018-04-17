@@ -159,11 +159,13 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
         }
         &-menu {
           box-shadow: $box-shadow;
-          &-link,
           &-item {
             padding: 4px 0;
             height: initial;
             align-items: stretch;
+          }
+          &-link {
+            width: 100%; // stretches the anchor tags
           }
         }
       }
