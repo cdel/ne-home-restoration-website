@@ -1,6 +1,8 @@
 @import '~_styles/variables/_variables';
 @import '~_styles/mixins/_global_mixins';
 
+$z-index-overlay: 100;
+
 .Navbar {
   margin-bottom: 16px;
   box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20px rgba(12,13,14,0.035), 0 1px 1px rgba(12,13,14,0.025);
@@ -94,16 +96,31 @@
         }
         @include Breakpoint($bp--medium) {
           flex-direction: column;
+          height: auto;
           position: absolute;
           width: 100%;
           top: 100%;
           left: 0;
+          z-index: $z-index-overlay;
+          &-item {
+            justify-content: center;
+          }
+          &-link {
+            &:focus,
+            &:hover {
+              .Navbar-header-navigation-menu-text {
+                border-bottom: none;
+              }
+            }
+          }
         }
         &-item,
         &-link {
           display: inline-flex;
           height: 100%;
+          width: 100%;
           align-items: center;
+          justify-content: center;
           &:hover,
           &:focus {
             color: $tertiary-beige;
@@ -117,6 +134,9 @@
               border-bottom: 4px solid $tertiary-beige--lighter;
             }
           }
+          @include Breakpoint($bp--medium) {
+            padding: 4px 0;
+          }
         }
         &-text {
           color: $secondary-grey;
@@ -124,7 +144,7 @@
           display: inline-block;
           margin: 0 16px;
           text-transform: uppercase;
-          padding-bottom: 4px;
+          padding-bottom: 8px; // prevents jumpiness for when border is added.
           @include Breakpoint($bp--larger) {
             font-size: $font-size--3000;
           }
