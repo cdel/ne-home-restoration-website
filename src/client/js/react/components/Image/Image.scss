@@ -1,0 +1,7 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
+.ImageComponent {
+  display: inline-flex;
+  border: 2px solid $brand-darkgrey;
+}

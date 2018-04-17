@@ -1,5 +1,15 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
 .Page {
   &-section {
+    position: relative;
     padding: 0 16px;
+    max-width: $bp--larger;
+    margin: 0 auto;
+    &--fluid {
+      margin: 0;
+    }
   }
+
 }

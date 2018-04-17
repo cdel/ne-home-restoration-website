@@ -60,7 +60,6 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
       &-wrapper {
         height: 100%;
         padding: 0 16px;
-        margin-left: 32px;
         @include Breakpoint($bp--large) {
           display: inline-flex;
           height: 100px;
