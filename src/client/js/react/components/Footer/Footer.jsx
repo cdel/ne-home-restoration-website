@@ -14,6 +14,9 @@ const Footer = props => {
           <Col xs={12} md={10} className="Footer-column">
             <p className="Footer-socialMediaBar-message">
               Follow our work on social media!
+              <span className="Footer-socialMediaBar-submessage">
+                "Fully Licensed and Insured..."
+              </span>
             </p>
           </Col>
           <Col xs={12} md={2} className="Footer-column">
