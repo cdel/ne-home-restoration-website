@@ -1,0 +1,11 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
+.ContactForm {
+  &-label {
+    font-size: $font-size--1000;
+  }
+  &-submitBtn {
+    margin: 16px 0;
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import {PageHeader} from 'react-bootstrap';
 import {SectionCard} from '_components/Page/Page';
 import Slideshow from '_components/Slideshow/Slideshow';
+import ContactForm from '_components/ContactForm/ContactForm';
 
 const showCaseHeight = 400;
 
@@ -12,6 +13,7 @@ const HomePage = props => {
       <Slideshow photos={photos} showCaption={false} height={showCaseHeight} />
       <SectionCard title="Our Mission">
         <p>Hello World!</p>
+        <ContactForm />
       </SectionCard>
     </div>
   );

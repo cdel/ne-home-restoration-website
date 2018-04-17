@@ -1,0 +1,17 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
+.FaqPage {
+  &-description {
+    font-size: $font-size--2000;
+    margin-bottom: 16px;
+  }
+  &-panel {
+    &-title {
+      font-size: $font-size--3000;
+    }
+    &-content {
+      font-size: $font-size--2000;
+    }
+  }
+}
