@@ -134,9 +134,6 @@ $z-index-overlay: 100;
               border-bottom: 4px solid $tertiary-beige--lighter;
             }
           }
-          @include Breakpoint($bp--medium) {
-            padding: 4px 0;
-          }
         }
         &-text {
           color: $secondary-grey;
@@ -160,6 +157,12 @@ $z-index-overlay: 100;
         border: 1px solid red;
         height: initial;
         width: 100px;
+        &-menu {
+          &-link,
+          &-item {
+            padding: 4px 0;
+          }
+        }
       }
     }
     &--expanded {
