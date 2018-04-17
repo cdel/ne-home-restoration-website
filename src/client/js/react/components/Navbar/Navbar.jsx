@@ -38,6 +38,14 @@ class NavigationBar extends React.Component {
         });
       }
     };
+    this.handleResize = (e) => {
+      const height = this.headerContentRef.clientHeight;
+      if (height !== this.state.height) {
+        this.setState({
+          height
+        });
+      }
+    };
   }
   shouldComponentUpdate(nextState) {
     const didUpdate = Object.keys(nextState).some(state => {
@@ -47,9 +55,11 @@ class NavigationBar extends React.Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleScroll);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleScroll);
   }
 
   render() {
