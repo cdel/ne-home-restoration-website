@@ -1,11 +1,18 @@
 html {
   box-sizing: border-box;
 }
+body,
+html {
+  font-size: $font-size--root;
+}
 html,
-body {
+body,
+ul {
   margin: 0;
   padding: 0;
-  font-size: $font-size--root;
+}
+ul {
+  list-style-type: none;
 }
 *, *:before, *:after {
   box-sizing: inherit;

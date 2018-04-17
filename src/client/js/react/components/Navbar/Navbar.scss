@@ -1,13 +1,122 @@
 @import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
 
 .Navbar {
-  border: 1px solid black;
   margin-bottom: 16px;
-  &-logo {
-    max-width: 300px;
-  }
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20px rgba(12,13,14,0.035), 0 1px 1px rgba(12,13,14,0.025);
   &-banner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: $font-size--4000;
     text-align: center;
-    color: $tertiary-beige;
+    font-weight: bold;
+    color: $white;
+    background: $primary-teal;
+    padding: 8px 4px;
+    &-message {
+      white-space: nowrap;
+    }
+    &-submessage {
+      flex-grow: 1;
+      margin-top: 4px;
+      font-weight: normal;
+      display: block;
+      font-style: italic;
+    }
+    &-tel {
+      color: $tertiary-beige;
+      text-decoration: underline;
+      &:hover {
+        color: $white;
+      }
+    }
+    &-socialMedia {
+      display: flex;
+      flex-grow: 0;
+      align-items: center;
+      &-account {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border: 1px solid $white;
+      }
+    }
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    @include Breakpoint($bp--larger) {
+      height: 100px;
+    }
+    @include Breakpoint($bp--large) {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+    }
+    &-logo {
+      &-image {
+        height: 100%;
+        width: auto;
+      }
+      &-wrapper {
+        height: 100%;
+        padding: 0 16px;
+        margin-left: 32px;
+        @include Breakpoint($bp--large) {
+          height: 100px;
+          margin-left: 0;
+          padding: 0;
+          margin: 0 auto; // center logo
+        }
+      }
+    }
+    &-navigation {
+      &-menu {
+        display: flex;
+        height: 100%;
+        white-space: nowrap;
+        margin: 0; // Reset...
+        @include Breakpoint($bp--large) {
+          justify-content: center;
+          height: 50px;
+        }
+        &-item,
+        &-link {
+          display: inline-flex;
+          height: 100%;
+          align-items: center;
+          &:hover,
+          &:focus {
+            color: $tertiary-beige;
+            text-decoration: none;
+            background: $secondary-grey;
+            transition: background .2s ease-in;
+            transform: translate3d(0,0,0);
+            .Navbar-header-navigation-menu-text {
+              color: $tertiary-beige;
+              padding-bottom: 4px;
+              border-bottom: 4px solid $tertiary-beige--lighter;
+            }
+          }
+        }
+        &-text {
+          color: $secondary-grey;
+          font-size: $font-size--4000;
+          display: inline-block;
+          margin: 0 16px;
+          text-transform: uppercase;
+          padding-bottom: 4px;
+          @include Breakpoint($bp--larger) {
+            font-size: $font-size--3000;
+          }
+          @include Breakpoint($bp--large) {
+            font-size: $font-size--3000;
+          }
+        }
+      }
+    }
   }
 }
