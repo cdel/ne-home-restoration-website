@@ -2,7 +2,7 @@ import React from 'react';
 import {Image} from 'react-bootstrap';
 import './Image.scss';
 
-const Image = props => {
+const ImageComponent = props => {
   return (
     <figure className="ImageComponent">
       <Image {...props} />
@@ -10,4 +10,4 @@ const Image = props => {
   );
 }
 
-export default Image;
+export default ImageComponent;

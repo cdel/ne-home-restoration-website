@@ -26,12 +26,12 @@ export const PageSection = (props) => {
 }
 
 export const SectionCard = props => {
-  const {title, children, textAlignment, background, icon} = props;
+  const {title, children, centerText, background, icon} = props;
   return (
     <PageSection>
       <div className={cx("Page-sectionCard-content", {
         'Page-sectionCard-content--overlay': !!background,
-        [`Page-sectionCard-content--align${textAlignment}`]: !!textAlignment
+        [`Page-sectionCard-content--center`]: !!centerText
       })}>
         <div className="Page-sectionCard-titleWrapper">
           <h2 className="Page-sectionCard-title">{title}</h2>

@@ -6,7 +6,7 @@
     position: relative;
     padding: 0 16px;
     max-width: $bp--larger;
-    margin: 0 auto;
+    margin: 24px auto;
     &--fluid {
       margin: 0;
     }
@@ -16,6 +16,9 @@
       font-size: $font-size--2000;
       color: $brand-darkgrey;
       padding: 16px 0;
+      &--center {
+        text-align: center;
+      }
     }
     &-titleWrapper {
       padding-bottom: 8px;

@@ -6,7 +6,9 @@ function mapStateToProps(state, containerProps) {
   const faqPage = state.faq;
 
   return {
-    photos: state.gallery.panoramic.photos.map(src => ({src, alt: "Remdoeling", }))
+    photos: state.gallery.panoramic.photos.map(src => ({src, alt: "Remdoeling", })),
+    about: state.about,
+    stockPhotos: state.gallery.stockPhotos
   };
 }
 
