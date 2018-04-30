@@ -7,6 +7,24 @@ import ImageComponent from '_components/Image/Image';
 
 const showCaseHeight = 400;
 const ANDRE_PHOTO = 'assets/ne-home-restoration-owner.png';
+const brands = [
+  {
+    src: 'assets/brands/buildclean_dust_brand.png',
+    name: 'BuildClean Dust Control HEPA'
+  },
+  {
+    src: 'assets/brands/edgewood_brand.png',
+    name: 'Edgewood Brand'
+  },
+  {
+    src: 'assets/brands/kohler_brand.png',
+    name: 'Kohler Fixtures'
+  },
+  {
+    src: 'assets/brands/wedi_brand.png',
+    name: 'Wedi Remodeling Brand'
+  }
+];
 
 const HomePage = props => {
   const {photos, about, stockPhotos} = props;
@@ -28,18 +46,11 @@ const HomePage = props => {
       <SectionCard title="Trusted Brands" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
-            <Col xs={6} md={3}>
-              <ImageComponent src={stockPhotos.brandLogo} />
-            </Col>
-            <Col xs={6} md={3}>
-              <ImageComponent src={stockPhotos.brandLogo} />
-            </Col>
-            <Col xs={6} md={3}>
-              <ImageComponent src={stockPhotos.brandLogo} />
-            </Col>
-            <Col xs={6} md={3}>
-              <ImageComponent src={stockPhotos.brandLogo} />
-            </Col>
+            {brands.map(brand => (
+              <Col key={brand.name} xs={6} md={3}>
+                <ImageComponent src={brand.src} alt={brand.name} />
+              </Col>
+            ))}
           </Row>
         </Grid>
       </SectionCard>
