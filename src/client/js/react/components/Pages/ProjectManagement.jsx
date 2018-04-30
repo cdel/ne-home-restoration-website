@@ -13,10 +13,10 @@ const PMPage = props => {
           <Col xs={12}>
             <p>{props.description}</p>
           </Col> 
-          <Col xs={12} sm={6}>
+          <Col xs={12} lg={8}>
             <Image src={props.videoSrc} />
           </Col>
-          <Col xs={12} sm={6}>
+          <Col xs={12} lg={4}>
             <ul className="PMPage-list">
               {props.benefits.map(benefit => (
                 <li key={benefit}>
