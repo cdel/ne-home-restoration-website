@@ -13,29 +13,29 @@ const HomePage = props => {
   return (
     <div className="HomePage">
       <Slideshow photos={photos} showCaption={false} height={showCaseHeight} />
-      <SectionCard title="Our Story" textAlign="center"  titleAlign="center" icon="glyphicon glyphicon-book">
+      <SectionCard title="Our Story" textAlign="center" separated titleAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} sm={6} md={6}>
               <ImageComponent src={ANDRE_PHOTO} />
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} sm={6} md={6}>
               <p>{about.company.background}</p>
             </Col>
           </Row>
         </Grid>
       </SectionCard>
-      <SectionCard title="Trusted Brands" titleAlign="center" textAlign="center" icon="glyphicon glyphicon-book">
+      <SectionCard title="Trusted Brands" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
             <Col xs={6} md={3}>
-              <ImageComponent withBorder src={stockPhotos.brandLogo} />
+              <ImageComponent src={stockPhotos.brandLogo} />
             </Col>
             <Col xs={6} md={3}>
-              <ImageComponent withBorder src={stockPhotos.brandLogo} />
+              <ImageComponent src={stockPhotos.brandLogo} />
             </Col>
             <Col xs={6} md={3}>
-              <ImageComponent withBorder src={stockPhotos.brandLogo} />
+              <ImageComponent src={stockPhotos.brandLogo} />
             </Col>
             <Col xs={6} md={3}>
               <ImageComponent src={stockPhotos.brandLogo} />

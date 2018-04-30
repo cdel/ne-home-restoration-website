@@ -48,22 +48,32 @@ SectionTitle.propTypes = {
 
 SectionTitle.defaultProps = {
   titleAlign: 'left',
-  separated: true
+  separated: false
 };
 
 export const SectionCard = props => {
-  const {title, children, textAlign, background, icon, titleAlign} = props;
+  const {title, children, textAlign, background, icon, titleAlign, separated} = props;
   return (
     <PageSection>
       <div className={cx("Page-sectionCard-content", {
         'Page-sectionCard-content--overlay': !!background,
         [`Page-sectionCard-content--${textAlign}`]: !!textAlign
       })}>
-        <SectionTitle title={title} icon={icon} titleAlign={titleAlign} />
+        <SectionTitle title={title} icon={icon} separated titleAlign={titleAlign} />
         {children}
       </div>
     </PageSection>
   );
 }
+
+SectionCard.propTypes = {
+  titleAlign: PropTypes.string,
+  separated: PropTypes.bool
+};
+
+SectionCard.defaultProps = {
+  titleAlign: 'left',
+  separated: false
+};
 
 export default Page;
