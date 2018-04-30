@@ -63,7 +63,7 @@ const HomePage = props => {
             </Col>
             {brands.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
-                <Card image={<ImageComponent src={brand.src} alt={brand.name} />} target="#hello" description="dfdfdfdf" />
+                <Card image={<ImageComponent src={brand.src} alt={brand.name} />} target="/gallery" description="dfdfdfdf" />
               </Col>
             ))}
           </Row>

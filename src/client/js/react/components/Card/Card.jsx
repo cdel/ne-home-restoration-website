@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from '_components/Image/Image';
+import {Link} from 'react-router-dom';
 import cx from '_utilities/classnames';
 import './Card.scss';
 
 const Card = props => {
   const {children, image, description, withoutBorder, target} = props;
-  const WrapperElement = target ? 'a' : 'div'
-  const attributes = target ? {href: target} : {};
+  const WrapperElement = target ? Link : 'div'
+  const attributes = target ? {to: target} : {};
   return (
     <WrapperElement className={cx("Card", {
       "Card--withoutBorder": withoutBorder
