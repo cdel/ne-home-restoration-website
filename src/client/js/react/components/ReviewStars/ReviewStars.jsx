@@ -14,7 +14,7 @@ const loop = (times, cb) => {
 const ReviewStars = props => {
   const {total, current} = props;
   return (
-    <div className={cx("ReviewStars", {})}>
+    <div className="ReviewStars">
       {loop(total, (index) => (
         <span key={`star-${index}`} className={cx("ReviewStars-item", {
           'glyphicon glyphicon-star': index <= current,

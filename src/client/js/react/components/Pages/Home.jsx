@@ -4,7 +4,7 @@ import Card from '_components/Card/Card';
 import {SectionCard} from '_components/Page/Page';
 import Slideshow from '_components/Slideshow/Slideshow';
 import ContactForm from '_components/ContactForm/ContactForm';
-import ReviewStars from '_components/ReviewStars/ReviewStars'
+import CustomerReview from '_components/CustomerReview/CustomerReview'
 import ImageComponent from '_components/Image/Image';
 
 const showCaseHeight = 400;
@@ -47,7 +47,7 @@ const previews = [
 ];
 
 const HomePage = props => {
-  const {photos, about, stockPhotos} = props;
+  const {photos, about, stockPhotos, reviews} = props;
   return (
     <div className="HomePage">
       <Slideshow photos={photos} showCaption={false} height={showCaseHeight} />
@@ -68,7 +68,6 @@ const HomePage = props => {
           <Row>
             <Col xs={12}>
               <p style={{['marginBottom']: 16}}>We use only the highest quality materials in our projects</p>
-              <ReviewStars current={4} total={5} />
             </Col>
             {brands.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
@@ -87,6 +86,17 @@ const HomePage = props => {
             {previews.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
                 <Card image={<ImageComponent expand src={brand.src} alt={brand.name} />} target="/gallery" description={brand.name} />
+              </Col>
+            ))}
+          </Row>
+        </Grid>
+      </SectionCard>
+      <SectionCard title="Testimonials" titleAlign="center" separated textAlign="left" icon="glyphicon glyphicon-user">
+        <Grid>
+          <Row>
+            {reviews.map(review => (
+              <Col key={review.id} xs={6} md={3}>
+                <CustomerReview  {...review}/>
               </Col>
             ))}
           </Row>

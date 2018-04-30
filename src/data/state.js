@@ -19,7 +19,16 @@ const state = {
     company: {
       name: "New England Home Restoration",
       background: "Whether an entire home renovation, a kitchen or bath remodel, or adding a beautiful new addition to your residence, our clients choose New England Home Restoration for our expert craftsmanship and unrivaled customer service. Integrity is at our core, and we respect both our client’s time and expectations. We offer a truly custom approach, where we take the time to carefully assess our client's goals, and provide experienced feedback. Our team always prioritizes building trust, which is why most of our clients stay with us for a lifetime.\n New England Home Restoration combines a deep commitment to customer intimacy and collaboration throughout all phases of the relationship. With a background in hands-on carpentry and years of experience in construction management, owner Andre LeBlanc prides himself and his team on quality craftsmanship and is an expert in understanding the many steps required to complete a project."
-    }
+    },
+    reviews: [
+      {
+        id: 123,
+        date: '04/10/2018',
+        customerName: 'Javier',
+        stars: 5,
+        comment: 'ihsdfihdfidh ihsf ishdf ih dsifhds hsdf isdhf sidhfs idfhsdifhsdi fh isdfhdisfhsdifhsdfihsd'
+      }
+    ]
   },
   contact: {
     phoneNumber: "781-800-0121",

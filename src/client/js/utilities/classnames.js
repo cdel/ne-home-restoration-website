@@ -1,4 +1,4 @@
-const cx = (mainClass, options) => {
+const cx = (mainClass, options = {}) => {
   const cssClasses = Object.keys(options).reduce((acc, cssClass) => {
     return options[cssClass] ? `${acc} ${cssClass}` : acc;
   }, '');

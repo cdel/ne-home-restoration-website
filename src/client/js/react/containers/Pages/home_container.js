@@ -8,7 +8,8 @@ function mapStateToProps(state, containerProps) {
   return {
     photos: state.gallery.panoramic.photos.map(src => ({src, alt: "Remdoeling", })),
     about: state.about,
-    stockPhotos: state.gallery.stockPhotos
+    stockPhotos: state.gallery.stockPhotos,
+    reviews: state.about.reviews
   };
 }
 
