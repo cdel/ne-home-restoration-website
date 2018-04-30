@@ -3,12 +3,12 @@ import PMPage from '_components/Pages/ProjectManagement';
 
 function mapStateToProps(state, containerProps) {
 
-  const faqPage = state.faq;
+  const {projectManagement} = state;
 
   return {
-    title: faqPage.title,
-    description: faqPage.description,
-    faqs: faqPage.faqs
+    title: projectManagement.title,
+    description: projectManagement.description,
+    videoSrc: projectManagement.video_src
   };
 }
 

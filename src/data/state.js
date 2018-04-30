@@ -53,7 +53,7 @@ const state = {
     title: "Project Management",
     description: "At New England Home Restoration, our online system gives you easy access to everything about your project. You can make selections, see progress, browse photos, review financial decisions, send messages, and more. All from any computer, tablet, or smartphone.",
     benefits: [],
-    video_src: "https://player.vimeo.com/video/207894066?title=0&byline=0&portrait=0"
+    video_src: "assets/pm_video.png"
   },
   gallery: {
     title: "Showcasing our work",
@@ -135,6 +135,10 @@ const state = {
   },
   pages: [  
     {
+      name: 'Home',
+      url: '/'
+    },
+    {
       name: 'About',
       url: '/about'
     },
@@ -153,10 +157,6 @@ const state = {
     {
       name: 'Gallery',
       url: '/gallery'
-    },
-    {
-      name: 'Home',
-      url: '/'
     },
     {
       name: 'Project Management',
