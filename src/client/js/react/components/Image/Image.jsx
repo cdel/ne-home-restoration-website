@@ -4,20 +4,23 @@ import PropTypes from 'prop-types';
 import './Image.scss';
 
 const ImageComponent = props => {
-  const {withBorder, ...rest} = props;
+  const {withBorder, expand, ...rest} = props;
   return (
     <figure className={cx("ImageComponent", {
-      "ImageComponent--withBorder": withBorder
+      "ImageComponent--withBorder": withBorder,
+      "ImageComponent--expand": expand
     })}>
       <img className="ImageComponent-img" {...rest} />
     </figure>
   );
 }
 ImageComponent.propTypes = {
-  withBorder: PropTypes.bool
+  withBorder: PropTypes.bool,
+  expand: PropTypes.bool
 };
 ImageComponent.defaultProps = {
-  withBorder: false
+  withBorder: false,
+  expand: false
 };
 
 export default ImageComponent;

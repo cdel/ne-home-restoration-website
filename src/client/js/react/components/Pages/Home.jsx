@@ -27,6 +27,25 @@ const brands = [
   }
 ];
 
+const previews = [
+  {
+    src: 'assets/previews/kitchens_preview.png',
+    name: 'Kitchens'
+  },
+  {
+    src: 'assets/previews/basement_preview.jpg',
+    name: 'Basements'
+  },
+  {
+    src: 'assets/previews/bathrooms_preview.png',
+    name: 'Bathrooms'
+  },
+  {
+    src: 'assets/previews/decks_preview.png',
+    name: 'Decks'
+  },
+];
+
 const HomePage = props => {
   const {photos, about, stockPhotos} = props;
   return (
@@ -44,9 +63,12 @@ const HomePage = props => {
           </Row>
         </Grid>
       </SectionCard>
-      <SectionCard title="Trusted Brands" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-book">
+      <SectionCard title="Trusted Brands" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-grain">
         <Grid>
           <Row>
+            <Col xs={12}>
+              <p style={{['marginBottom']: 16}}>We use only the highest quality materials in our projects</p>
+            </Col>
             {brands.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
                 <ImageComponent src={brand.src} alt={brand.name} />
@@ -55,15 +77,15 @@ const HomePage = props => {
           </Row>
         </Grid>
       </SectionCard>
-      <SectionCard title="Our Work" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-book">
+      <SectionCard title="Our Work" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-wrench">
         <Grid>
           <Row>
             <Col xs={12}>
               <p style={{['marginBottom']: 16}}>Transforming an undecorated room into a stylish space, this is what we are specializing in. We can change every old, teary space in your house into a lavish sanctuary. We can guide you through the design process and help ensure the vision of your new space is achieved. Every room in your house will be made to feel like a comfortable, safe haven.</p>
             </Col>
-            {brands.map(brand => (
+            {previews.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
-                <Card image={<ImageComponent src={brand.src} alt={brand.name} />} target="/gallery" description="dfdfdfdf" />
+                <Card image={<ImageComponent expand src={brand.src} alt={brand.name} />} target="/gallery" description={brand.name} />
               </Col>
             ))}
           </Row>

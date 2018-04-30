@@ -16,4 +16,12 @@
   &--withBorder {
     border: 2px solid $brand-darkgrey;
   }
+  &--expand {
+    .ImageComponent-img {
+      width: auto;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+    }
+  }
 }

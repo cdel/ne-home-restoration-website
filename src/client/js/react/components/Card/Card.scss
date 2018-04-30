@@ -8,6 +8,9 @@
   border: 2px solid $brand-lightgrey--lighter;
   border-radius: 4px;
   color: $brand-darkgrey;
+  &:hover {
+    text-decoration: underline;
+  }
   &-image {
     border-bottom: 1px solid $brand-lightgrey--lighter;
     height: 200px;
