@@ -5,9 +5,10 @@ import cx from '_utilities/classnames';
 import './Card.scss';
 
 const Card = props => {
-  const {children, image, description, withoutBorder} = props;
+  const {children, image, description, withoutBorder, target} = props;
+  const WrapperElement = target ? 'a' : 'div'
   return (
-    <div className={cx("Card", {
+    <WrapperElement className={cx("Card", {
       "Card--withoutBorder": withoutBorder
     })}>
       <div className="Card-image">
@@ -19,15 +20,17 @@ const Card = props => {
           <span className="glyphicon glyphicon-arrow-right"></span>
         </div>
       </div>
-    </div>
+    </WrapperElement>
   );
 }
 
 Card.propTypes = {
-  withoutBorder: PropTypes.bool
+  withoutBorder: PropTypes.bool,
+  target: PropTypes.string,
 };
 
 Card.defaultProps = {
+  target: '',
   withoutBorder: false
 };
 

@@ -2,6 +2,8 @@
 @import '~_styles/mixins/_global_mixins';
 
 .Card {
+  display: block;
+  text-decoration: none;
   border: 2px solid $brand-lightgrey--lighter;
   border-radius: 4px;
   &-image {
