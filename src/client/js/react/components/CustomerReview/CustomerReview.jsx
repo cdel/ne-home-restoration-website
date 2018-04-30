@@ -13,13 +13,13 @@ const Review = props => {
       <div className="CustomerReview-infoWrap">
         <span className="CustomerReview-date">{date}</span>
         <div className="CustomerReview-stars">
-          <ReviewStars curret={stars} total={NUM_OF_STARS} />
+          <ReviewStars current={stars} total={NUM_OF_STARS} />
         </div>
       </div>
       <p className="CustomerReview-comment">
         {comment}
       </p>
-      <span className="CustomerReview-customerName">{customerName}</span>
+      <span className="CustomerReview-name">{customerName}</span>
     </div>
   );
 };
