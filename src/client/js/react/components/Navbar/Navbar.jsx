@@ -94,7 +94,7 @@ class NavigationBar extends React.Component {
             </button>
             <ul className="Navbar-header-navigation-menu">
               {props.pages.map(page => (
-                <li key={page.name} className="Navbar-header-navigation-menu-item">
+                <li key={page.name} onClick={this.toggleMenu} className="Navbar-header-navigation-menu-item">
                   <Link to={page.url} className="Navbar-header-navigation-menu-link"><span className="Navbar-header-navigation-menu-text">{page.name}</span></Link>
                 </li>
               ))}

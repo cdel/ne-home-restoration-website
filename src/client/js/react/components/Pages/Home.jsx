@@ -16,7 +16,7 @@ const HomePage = props => {
         <Grid>
           <Row>
             <Col xs={12} md={6}>
-
+              
             </Col>
             <Col xs={12} md={6}>
               <p>{about.company.background}</p>
@@ -27,16 +27,16 @@ const HomePage = props => {
       <SectionCard title="Trusted Brands" centerText icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
-            <Col xs={12} md={3}>
+            <Col xs={6} md={3}>
               <ImageComponent src={stockPhotos.brandLogo} />
             </Col>
-            <Col xs={12} md={3}>
+            <Col xs={6} md={3}>
               <ImageComponent src={stockPhotos.brandLogo} />
             </Col>
-            <Col xs={12} md={3}>
+            <Col xs={6} md={3}>
               <ImageComponent src={stockPhotos.brandLogo} />
             </Col>
-            <Col xs={12} md={3}>
+            <Col xs={6} md={3}>
               <ImageComponent src={stockPhotos.brandLogo} />
             </Col>
           </Row>
