@@ -2,7 +2,13 @@
 @import '~_styles/mixins/_global_mixins';
 
 .ImageComponent {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-img {
+    height: auto;
+    width: 100%;
+  }
   &--withBorder {
     border: 2px solid $brand-darkgrey;
   }

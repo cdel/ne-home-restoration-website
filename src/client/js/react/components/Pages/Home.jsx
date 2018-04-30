@@ -6,6 +6,7 @@ import ContactForm from '_components/ContactForm/ContactForm';
 import ImageComponent from '_components/Image/Image';
 
 const showCaseHeight = 400;
+const ANDRE_PHOTO = 'assets/ne-home-restoration-owner.png';
 
 const HomePage = props => {
   const {photos, about, stockPhotos} = props;
@@ -16,7 +17,7 @@ const HomePage = props => {
         <Grid>
           <Row>
             <Col xs={12} md={6}>
-              
+              <ImageComponent src={ANDRE_PHOTO} />
             </Col>
             <Col xs={12} md={6}>
               <p>{about.company.background}</p>

@@ -1,16 +1,15 @@
 import React from 'react';
-import {Image} from 'react-bootstrap';
 import cx from '_utilities/classnames';
 import PropTypes from 'prop-types';
 import './Image.scss';
 
 const ImageComponent = props => {
-  const {withBorder, ...rest} = props;
+  const {withBorder, src, ...rest} = props;
   return (
     <figure className={cx("ImageComponent", {
       "ImageComponent--withBorder": withBorder
     })}>
-      <Image {...rest} />
+      <img className="ImageComponent-img" src={src} />
     </figure>
   );
 }
