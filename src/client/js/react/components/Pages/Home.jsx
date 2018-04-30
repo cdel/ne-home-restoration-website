@@ -12,7 +12,7 @@ const HomePage = props => {
   return (
     <div className="HomePage">
       <Slideshow photos={photos} showCaption={false} height={showCaseHeight} />
-      <SectionCard title="Our Story" centerText icon="glyphicon glyphicon-book">
+      <SectionCard title="Our Story" textAlign="center"  titleAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
             <Col xs={12} md={6}>
@@ -24,17 +24,17 @@ const HomePage = props => {
           </Row>
         </Grid>
       </SectionCard>
-      <SectionCard title="Trusted Brands" centerText icon="glyphicon glyphicon-book">
+      <SectionCard title="Trusted Brands" titleAlign="center" textAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
             <Col xs={6} md={3}>
-              <ImageComponent src={stockPhotos.brandLogo} />
+              <ImageComponent withBorder src={stockPhotos.brandLogo} />
             </Col>
             <Col xs={6} md={3}>
-              <ImageComponent src={stockPhotos.brandLogo} />
+              <ImageComponent withBorder src={stockPhotos.brandLogo} />
             </Col>
             <Col xs={6} md={3}>
-              <ImageComponent src={stockPhotos.brandLogo} />
+              <ImageComponent withBorder src={stockPhotos.brandLogo} />
             </Col>
             <Col xs={6} md={3}>
               <ImageComponent src={stockPhotos.brandLogo} />
