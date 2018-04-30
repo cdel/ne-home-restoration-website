@@ -58,6 +58,9 @@ const HomePage = props => {
       <SectionCard title="Our Work" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
+            <Col xs={12}>
+              <p style={{['marginBottom']: 16}}>Transforming an undecorated room into a stylish space, this is what we are specializing in. We can change every old, teary space in your house into a lavish sanctuary. We can guide you through the design process and help ensure the vision of your new space is achieved. Every room in your house will be made to feel like a comfortable, safe haven.</p>
+            </Col>
             {brands.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
                 <Card image={<ImageComponent src={brand.src} alt={brand.name} />} description="dfdfdfdf" />
