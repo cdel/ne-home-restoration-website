@@ -4,6 +4,7 @@ import Card from '_components/Card/Card';
 import {SectionCard} from '_components/Page/Page';
 import Slideshow from '_components/Slideshow/Slideshow';
 import ContactForm from '_components/ContactForm/ContactForm';
+import ReviewStars from '_components/ReviewStars/ReviewStars'
 import ImageComponent from '_components/Image/Image';
 
 const showCaseHeight = 400;
@@ -26,7 +27,6 @@ const brands = [
     name: 'Wedi Remodeling Brand'
   }
 ];
-
 const previews = [
   {
     src: 'assets/previews/kitchens_preview.png',
@@ -68,6 +68,7 @@ const HomePage = props => {
           <Row>
             <Col xs={12}>
               <p style={{['marginBottom']: 16}}>We use only the highest quality materials in our projects</p>
+              <ReviewStars current={4} total={5} />
             </Col>
             {brands.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
