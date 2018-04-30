@@ -2,10 +2,12 @@
 @import '~_styles/mixins/_global_mixins';
 
 .Card {
+  @include reset_anchor_styles();
   display: block;
   text-decoration: none;
   border: 2px solid $brand-lightgrey--lighter;
   border-radius: 4px;
+  color: $brand-darkgrey;
   &-image {
     border-bottom: 1px solid $brand-lightgrey--lighter;
     height: 200px;

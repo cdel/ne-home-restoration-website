@@ -7,10 +7,11 @@ import './Card.scss';
 const Card = props => {
   const {children, image, description, withoutBorder, target} = props;
   const WrapperElement = target ? 'a' : 'div'
+  const attributes = target ? {href: target} : {};
   return (
     <WrapperElement className={cx("Card", {
       "Card--withoutBorder": withoutBorder
-    })}>
+    })} {...attributes}>
       <div className="Card-image">
         {image}
       </div>
@@ -30,7 +31,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  target: '',
+  target: null,
   withoutBorder: false
 };
 
