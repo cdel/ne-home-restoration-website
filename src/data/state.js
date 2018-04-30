@@ -52,7 +52,18 @@ const state = {
   projectManagement: {
     title: "Project Management",
     description: "At New England Home Restoration, our online system gives you easy access to everything about your project. You can make selections, see progress, browse photos, review financial decisions, send messages, and more. All from any computer, tablet, or smartphone.",
-    benefits: [],
+    benefits: [
+      'Make Selections Easy',
+      'Single-Entry Estimating',
+      'Streamline Bidding',
+      'Effortless Proposals',
+      'Track Change Orders & Expenses',
+      'Improve Client Communication',
+      'Manage & Track Leads',
+      'Share Files & Photos',
+      'Budget & Forecast Project Costs',
+      'Track Jobsite Activity & Progress'
+    ],
     video_src: "assets/pm_video.png"
   },
   gallery: {

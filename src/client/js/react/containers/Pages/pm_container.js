@@ -8,7 +8,8 @@ function mapStateToProps(state, containerProps) {
   return {
     title: projectManagement.title,
     description: projectManagement.description,
-    videoSrc: projectManagement.video_src
+    videoSrc: projectManagement.video_src,
+    benefits: projectManagement.benefits
   };
 }
 

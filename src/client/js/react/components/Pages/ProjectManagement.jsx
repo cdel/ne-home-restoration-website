@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Image from '_components/Image/Image';
 import {Grid, Col, Row} from 'react-bootstrap';
 import {SectionCard} from '_components/Page/Page';
+import './PMPage.scss';
 
 const PMPage = props => {
   return (
@@ -16,7 +17,13 @@ const PMPage = props => {
             <Image src={props.videoSrc} />
           </Col>
           <Col xs={12} sm={6}>
-            <p></p>
+            <ul className="PMPage-list">
+              {props.benefits.map(benefit => (
+                <li key={benefit}>
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
           </Col>
         </Row>
       </Grid>

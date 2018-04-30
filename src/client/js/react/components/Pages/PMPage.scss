@@ -1,0 +1,10 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
+.PMPage {
+  &-list {
+    padding: 24px 16px;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+}
