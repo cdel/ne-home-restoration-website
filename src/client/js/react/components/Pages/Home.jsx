@@ -1,5 +1,6 @@
 import React from 'react';
 import {PageHeader, Grid, Col, Row} from 'react-bootstrap';
+import Card from '_components/Card/Card';
 import {SectionCard} from '_components/Page/Page';
 import Slideshow from '_components/Slideshow/Slideshow';
 import ContactForm from '_components/ContactForm/ContactForm';
@@ -49,6 +50,17 @@ const HomePage = props => {
             {brands.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
                 <ImageComponent src={brand.src} alt={brand.name} />
+              </Col>
+            ))}
+          </Row>
+        </Grid>
+      </SectionCard>
+      <SectionCard title="Our Work" titleAlign="center" separated textAlign="center" icon="glyphicon glyphicon-book">
+        <Grid>
+          <Row>
+            {brands.map(brand => (
+              <Col key={brand.name} xs={6} md={3}>
+                <Card image={<ImageComponent src={brand.src} alt={brand.name} />} description="dfdfdfdf" />
               </Col>
             ))}
           </Row>
