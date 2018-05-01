@@ -180,10 +180,6 @@ const state = {
       url: '/'
     },
     {
-      name: 'About',
-      url: '/about'
-    },
-    {
       name: 'Contact',
       url: '/contact'
     },
@@ -192,16 +188,20 @@ const state = {
       url: '/faq'
     },
     {
-      name: 'Financing',
-      url: '/financing'
+      name: 'About',
+      url: '/about'
+    },
+    {
+      name: 'Project Management',
+      url: '/project-management'
     },
     {
       name: 'Gallery',
       url: '/gallery'
     },
     {
-      name: 'Project Management',
-      url: '/project-management'
+      name: 'Financing',
+      url: '/financing'
     }
   ]
 };

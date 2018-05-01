@@ -79,6 +79,7 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
         border-radius: 4px;
         &-icon {
           font-size: 30px;
+          margin: 0 auto;
         }
       }
       &-menu {
@@ -150,13 +151,13 @@ $box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 14px rgba(12,13,14,0.1), 0 10px 2
         height: 50px;
       }
       @include Breakpoint($bp--medium) {
-        height: initial;
+        height: 100px;
         width: 100px;
         padding: 20px; // centers the button.
         &-toggle {
           display: flex;
           justify-content: center;
-          justify-items: center;
+          align-items: center;
         }
         &-menu {
           box-shadow: $box-shadow;
