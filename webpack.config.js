@@ -98,9 +98,14 @@ const browserConfig = {
         /* Combines all the sass files being imported into one. */
         new ExtractTextPlugin('styles/main.css'),
         /* Copies all the files in source directory assets to production */
-        new CopyWebpackPlugin([{
+        new CopyWebpackPlugin([
+          {
             from: 'assets', to: 'assets'
-        }])
+          },
+          {
+            from: 'index.html', to: 'index.html'
+          }
+        ])
     ],
     /* Runs development server */
     devServer: {
