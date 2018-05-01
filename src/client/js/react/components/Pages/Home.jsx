@@ -59,7 +59,7 @@ const HomePage = props => {
               <ImageComponent withBorder src={ANDRE_PHOTO} />
             </Col>
             <Col xs={12} sm={6} md={6}>
-              <p>{about.company.background}</p>
+              <p>{about.owner.background}</p>
             </Col>
           </Row>
         </Grid>
