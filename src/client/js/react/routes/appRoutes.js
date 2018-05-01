@@ -1,7 +1,7 @@
 // Import each page
 import Home from '_containers/Pages/home_container';
-import About from '_components/Pages/About';
-import Contact from '_components/Pages/Contact';
+import About from '_containers/Pages/about_container';
+import Contact from '_containers/Pages/contact_container';
 import Faq from '_containers/Pages/faq_container';
 import Financing from '_components/Pages/Financing';
 import Gallery from '_containers/GalleryPage/GalleryPage_container';
@@ -15,28 +15,28 @@ const routes = [
     exact: true,
   },
   {
-    path: '/about',
-    component: About,
+    path: '/faq',
+    component: Faq
   },
   {
     path: '/contact',
     component: Contact
   },
   {
-    path: '/faq',
-    component: Faq
-  },
-  {
-    path: '/financing',
-    component: Financing,
+    path: '/project-management',
+    component: PMPage,
   },
   {
     path: '/gallery',
     component: Gallery,
   },
   {
-    path: '/project-management',
-    component: PMPage,
+    path: '/about',
+    component: About,
+  },
+  {
+    path: '/financing',
+    component: Financing,
   },
   {
     component: NotFound404
