@@ -56,7 +56,9 @@ const HomePage = props => {
         <Grid>
           <Row>
             <Col xs={12} sm={6} md={6}>
-              <ImageComponent withBorder src={ANDRE_PHOTO} />
+              <Block mt={8} mb={8}>
+                <ImageComponent withBorder src={ANDRE_PHOTO} />
+              </Block>
             </Col>
             <Col xs={12} sm={6} md={6}>
               <p>{about.owner.background}</p>
