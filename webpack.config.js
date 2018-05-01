@@ -101,9 +101,6 @@ const browserConfig = {
         new CopyWebpackPlugin([
           {
             from: 'assets', to: 'assets'
-          },
-          {
-            from: 'index.html', to: 'index.html'
           }
         ])
     ],
