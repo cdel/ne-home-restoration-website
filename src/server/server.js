@@ -36,8 +36,7 @@ function renderFullPage(html, preloadedState) {
   <!doctype html>
   <html>
     <head>
-    <title>Getting Started</title>
-    <title>Asset Management</title>
+    <title>New England Home Restoration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/main.css" rel="stylesheet"></head>
     <body>
