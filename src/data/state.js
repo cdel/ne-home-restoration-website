@@ -29,21 +29,21 @@ const state = {
         comment: 'He did high quality work on all items, and he made sure we did a walk-through to see all the finished work to ensure customer satisfaction.'
       },
       {
-        id: 123,
+        id: 124,
         date: 'A month ago',
         customerName: 'Derek Libby',
         stars: 5,
         comment: 'Perhaps even more than the end result we appreciate the fact that he came back to clean up after and fix a major leak in our foundation left by our well contractor.'
       },
       {
-        id: 123,
+        id: 125,
         date: 'A year ago',
         customerName: 'Amber Moore',
         stars: 5,
         comment: 'Andre built a bench over a radiator and installed crown moulding in a closet. Reliable, quick response to my questions and project completed quickly.'
       },
       {
-        id: 123,
+        id: 126,
         date: '11 Months ago',
         customerName: 'Priscilla Brown',
         stars: 5,

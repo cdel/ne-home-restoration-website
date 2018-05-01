@@ -1,6 +1,7 @@
 import React from 'react';
 import {PageHeader, Grid, Col, Row} from 'react-bootstrap';
 import Card from '_components/Card/Card';
+import {Block} from '_components/Grid/Grid';
 import {SectionCard} from '_components/Page/Page';
 import Slideshow from '_components/Slideshow/Slideshow';
 import ContactForm from '_components/ContactForm/ContactForm';
@@ -85,7 +86,9 @@ const HomePage = props => {
             </Col>
             {previews.map(brand => (
               <Col key={brand.name} xs={6} md={3}>
-                <Card image={<ImageComponent expand src={brand.src} alt={brand.name} />} target="/gallery" description={brand.name} />
+                <Block mt={8} mb={8}>
+                  <Card image={<ImageComponent expand src={brand.src} alt={brand.name} />} target="/gallery" description={brand.name} />
+                </Block>
               </Col>
             ))}
           </Row>
