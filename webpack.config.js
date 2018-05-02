@@ -20,7 +20,7 @@ const browserConfig = {
         /* Sets the output point directory (All of our build files go into it) */
         path: path.resolve(__dirname, 'dist/client')
     },
-    devtool: isDevelopment && "source-map",
+    devtool: isDevelopment ? "source-map" : "none",
     resolve: {
         extensions: [".js", ".jsx"],
         /* Helps avoid absolute paths */
@@ -102,7 +102,8 @@ const browserConfig = {
           {
             from: 'assets', to: 'assets'
           }
-        ])
+        ]),
+        new UglifyJSPlugin()
     ],
     /* Runs development server */
     devServer: {
@@ -115,7 +116,7 @@ const browserConfig = {
 
 const serverConfig = {
     mode: isDevelopment ? "development" : "production",
-    devtool: isDevelopment && "source-map",
+    devtool: isDevelopment ? "source-map" : "none",
     /* Sets the entry point directory (All of our source files go into it) */
     context: path.resolve(__dirname, 'src/server'),
     entry: './server.js',
@@ -172,7 +173,10 @@ const serverConfig = {
                }
             }
         ]
-    }
+    },
+    plugins: [
+        new UglifyJSPlugin()
+    ]
 };
 
 module.exports = [browserConfig, serverConfig];
