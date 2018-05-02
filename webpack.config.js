@@ -56,21 +56,21 @@ const browserConfig = {
                                 // If you are having trouble with urls not resolving add this setting.
                                 // See https://github.com/webpack-contrib/css-loader#url
                                 url: false,
-                                sourceMap: true
+                                sourceMap: isDevelopment
                             }
                         },
                         {
                             loader: 'postcss-loader',
                             options: {
                                 // Meant to add CSS browser prefixes to properties not widely supported.
-                               sourceMap: true,
+                               sourceMap: isDevelopment,
                                plugins: [autoPrefixer()]
                             }
                         },
                         {
                             loader: 'sass-loader',
                             options: {
-                                sourceMap: true
+                                sourceMap: isDevelopment
                             }
                         }
                     ]
@@ -127,7 +127,7 @@ const serverConfig = {
         libraryTarget: 'commonjs2'
     },
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".scss"],
         /* Helps avoid absolute paths */
         alias: {
             _components: path.resolve(__dirname, 'src/client/js/react/components'),
@@ -155,6 +155,9 @@ const serverConfig = {
                 use: [
                     {
                         loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
                     }
                 ]
             },
