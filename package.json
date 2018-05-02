@@ -29,7 +29,7 @@
     "url": "https://github.com/moczka/ne-home-restoration-website/issues"
   },
   "homepage": "https://github.com/moczka/ne-home-restoration-website#readme",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
