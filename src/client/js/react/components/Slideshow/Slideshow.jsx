@@ -38,27 +38,26 @@ class Slideshow extends React.Component {
         >
         {photos.length ? (
           photos.map((photo, index) => (
-            <Carousel.Item key={`${photo.alt}-${index}`} direction={direction}>
-              <div className="Slideshow-imageWrapper" style={{height: `${height}px`}}>
-                <img onClick={this.togglePreview} alt={photo.alt} src={photo.src} />
+            <Carousel.Item key={photo.id} direction={direction}>
+              <div className="Slideshow-imageWrapper" style={{height: `${photo.height}px`}}>
+                <img onClick={this.togglePreview} alt={photo.title} src={photo.src} />
               </div>
               {this.props.showCaption && (
                 <Carousel.Caption>
-                  <h3>{photo.alt}</h3>
+                  <h3>{photo.title}</h3>
                   {photo.description && (
                     <p>{photo.description}</p>
                   )}
                 </Carousel.Caption>
               )}
             </Carousel.Item>
-          ))
-        ) : (
+          ))) : (
           <div className="Slideshow is-loading">Slideshow is loading your images!</div>
         )}
         </Carousel>
         {isPreviewOpen && (
           <Lightbox
-            mainSrc={photos[activePhoto].src}
+            mainSrc={photos[activePhoto]["original"].src}
             onCloseRequest={this.togglePreview}
           />
         )}

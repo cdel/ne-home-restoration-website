@@ -37,7 +37,9 @@ const browserConfig = {
             _data: path.resolve(__dirname, 'src/data'),
             _utilities: path.resolve(__dirname, 'src/client/js/utilities'),
             _styles: path.resolve(__dirname, 'src/client/styles'),
-            _assets: path.resolve(__dirname, 'src/client/assets')
+            _assets: path.resolve(__dirname, 'src/client/assets'),
+            _serverUtils: path.resolve(__dirname, 'src/server/serverUtils'),
+            _serverApis: path.resolve(__dirname, 'src/server/apis')
         },
         modules: [path.resolve(__dirname, "src/client/js"), "node_modules"]
     },
@@ -121,7 +123,7 @@ const serverConfig = {
     devtool: isDevelopment && "source-map",
     /* Sets the entry point directory (All of our source files go into it) */
     context: path.resolve(__dirname, 'src/server'),
-    entry: './server.js',
+    entry: './serverUtils/createState.js',
     target: "node",
     output: {
         filename: 'server.js',
@@ -145,7 +147,9 @@ const serverConfig = {
             _data: path.resolve(__dirname, 'src/data'),
             _utilities: path.resolve(__dirname, 'src/client/js/utilities'),
             _styles: path.resolve(__dirname, 'src/client/styles'),
-            _assets: path.resolve(__dirname, 'src/client/assets')
+            _assets: path.resolve(__dirname, 'src/client/assets'),
+            _serverUtils: path.resolve(__dirname, 'src/server/serverUtils'),
+            _serverApis: path.resolve(__dirname, 'src/server/apis')
         },
         modules: [path.resolve(__dirname, "src/client/js"), "node_modules"]
     },
@@ -175,4 +179,4 @@ const serverConfig = {
     }
 };
 
-module.exports = [browserConfig];
+module.exports = [browserConfig, serverConfig];

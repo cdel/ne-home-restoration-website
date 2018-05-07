@@ -99,7 +99,6 @@ const state = {
   gallery: {
     title: "Showcasing our work",
     slideshow: {
-      photos: [],
       albumId: "72157694152735684",
       fetching: false,
       fetched: false

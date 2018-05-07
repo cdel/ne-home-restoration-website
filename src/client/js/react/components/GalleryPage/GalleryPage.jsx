@@ -14,19 +14,14 @@ class GalleryPage extends React.Component {
     };
   }
 
-  componentDidMount() {
-    const {albumId} = this.props.slideshow;
-    this.props.handleAlbumChange(albumId);
-  }
-
   render() {
     const {albums, slideshow} = this.props;
     return (
       <div>
         {albums.map(album => (
-          <button key={album.albumId} disabled={album.albumId === slideshow.albumId} onClick={this.handleAlbumChange(album.albumId)}>{album.name}</button>
+          <button key={album.albumId} disabled={album.albumId === slideshow.album.albumId} onClick={this.handleAlbumChange(album.albumId)}>{album.title}</button>
         ))}
-        <Slideshow photos={slideshow.photos} />
+        <Slideshow photos={slideshow.album.photos} />
       </div>
     );
   }
