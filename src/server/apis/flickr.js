@@ -8,30 +8,27 @@ export const fetchPhotoData = (photoId, addValues) => {
   const photoDataUrl = `https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=${apiKeys.flickr}&photo_id=${photoId}&format=json&nojsoncallback=1`;
   return axios.get(photoDataUrl).then(data => {
     const sizes = data.data.sizes.size.reduce((acc, size) => {
-      // Only interested in sizes with larger resolution
-      const isOriginal = /original/ig.test(size.label);
-      const sizeName = /\d+/ig.test(size.label) ? size.label.match(/\w+/)[0].toLowerCase() : '';
+      const sizeName = /\d+|original/ig.test(size.label) ? size.label.match(/\w+/)[0].toLowerCase() : '';
 
-      // Add sizes with higher resolutions
-      if (!sizeName) {
-        return acc;
-      } else if (isOriginal) {
+      // Add custom sizes as a property of the image.
+       if (sizeName === "original") {
         acc.id = photoId,
         acc.src = size.source;
-        acc.width = size.width;
-        acc.height = size.height;
-        Object.assign(acc, addValues);
-        return acc;
+        acc.width = parseInt(size.width, 10);
+        acc.height = parseInt(size.height, 10);
+        return Object.assign(acc, addValues);
+      } else if (sizeName) {
+        acc[sizeName] = {
+          id: photoId,
+          width: parseInt(size.width, 10),
+          height: parseInt(size.height, 10),
+          src: size.source,
+          ...addValues
+        };
       }
 
-      acc[sizeName] = {
-        width: size.width,
-        height: size.height,
-        src: size.source,
-        ...addValues
-      };
-
       return acc;
+
     }, {});
     return sizes;
   }).catch(error => {

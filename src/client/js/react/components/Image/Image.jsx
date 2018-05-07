@@ -20,18 +20,18 @@ class ImageComponent extends React.Component {
     };
   }
   render() {
-    const {withBorder, expand, ...rest} = this.props;
+    const {withBorder, expand, height, width, src, alt} = this.props;
     const {isLoading} = this.state;
-    console.log(`RENDERED ON CLIENT: ${!!window}`);
+    const styles = width && height ? {width, height} : {};
     return (
       <figure className={cx("ImageComponent", {
         "ImageComponent--withBorder": withBorder,
         "ImageComponent--expand": expand
       })}>
         {!isLoading ? (
-          <img className="ImageComponent-img" {...rest} />
+          <img className="ImageComponent-img" src={src} alt={alt} />
         ) : (
-          <div className="ImageComponent-loader" />
+          <div className="ImageComponent-loader" style={styles}/>
         )}
       </figure>
     );
@@ -39,11 +39,15 @@ class ImageComponent extends React.Component {
 }
 ImageComponent.propTypes = {
   withBorder: PropTypes.bool,
-  expand: PropTypes.bool
+  expand: PropTypes.bool,
+  width: PropTypes.number,
+  height: PropTypes.number
 };
 ImageComponent.defaultProps = {
   withBorder: false,
-  expand: false
+  expand: false,
+  height: 100,
+  width: 100
 };
 
 export default ImageComponent;
