@@ -3,6 +3,8 @@ import cx from '_utilities/classnames';
 import PropTypes from 'prop-types';
 import './Image.scss';
 
+const noop = () => {};
+
 class ImageComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -20,16 +22,16 @@ class ImageComponent extends React.Component {
     };
   }
   render() {
-    const {withBorder, expand, height, width, src, alt} = this.props;
+    const {withBorder, expand, height, width, src, alt, onClick} = this.props;
     const {isLoading} = this.state;
     const styles = width && height ? {width, height} : {};
     return (
       <figure className={cx("ImageComponent", {
         "ImageComponent--withBorder": withBorder,
         "ImageComponent--expand": expand
-      })}>
+      })} onClick={onClick}>
         {!isLoading ? (
-          <img className="ImageComponent-img" src={src} alt={alt} />
+          <img className="ImageComponent-img" src={src} alt={alt} style={styles}/>
         ) : (
           <div className="ImageComponent-loader" style={styles}/>
         )}
@@ -41,13 +43,18 @@ ImageComponent.propTypes = {
   withBorder: PropTypes.bool,
   expand: PropTypes.bool,
   width: PropTypes.number,
-  height: PropTypes.number
+  height: PropTypes.number,
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  onClick: PropTypes.func
 };
 ImageComponent.defaultProps = {
   withBorder: false,
   expand: false,
-  height: 100,
-  width: 100
+  height: null,
+  width: null,
+  alt: '',
+  onClick: noop
 };
 
 export default ImageComponent;

@@ -43,7 +43,7 @@ class Slideshow extends React.Component {
             const photo = photoData[size] || photoData;
             return (
               <Carousel.Item key={`${photo.id}-${index}`} direction={direction}>
-                <div className="Slideshow-imageWrapper" onClick={this.togglePreview} >
+                <div className="Slideshow-imageWrapper" onClick={this.togglePreview}>
                   <Image alt={photo.title} src={photo.src} height={photo.height} width={photo.width}/>
                 </div>
                 {this.props.showCaption && (
