@@ -72,7 +72,7 @@ class Slideshow extends React.Component {
 }
 
 Slideshow.defaultProps = {
-  size: 'original',
+  size: 'medium',
   height: 500,
   showIndicators: true,
   allowPreview: true,
