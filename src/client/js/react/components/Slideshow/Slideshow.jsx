@@ -6,7 +6,7 @@ import { Carousel } from 'react-bootstrap';
 import './Slideshow.scss';
 
 
-class Slideshow extends React.Component {
+class Slideshow extends React.PureComponent {
 
   constructor(props) {
     super(props);

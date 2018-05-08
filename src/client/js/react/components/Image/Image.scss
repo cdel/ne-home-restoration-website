@@ -9,9 +9,8 @@
   height: 100%;
   width: 100%;
   &-img {
-    flex-grow: 0;
-    max-height: 100%;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
   &--withBorder {
     border: 2px solid $brand-darkgrey;
@@ -33,8 +32,6 @@
     .ImageComponent-img {
       width: auto;
       height: 100%;
-      max-height: none;
-      max-width: none;
     }
   }
 }
