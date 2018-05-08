@@ -12,11 +12,16 @@ const fetchFlickrAlbums = () => (
 );
 
 export const createState = () => {
-  return Promise.all([
-    fetchFlickrAlbums()
-  ]).then(() => {
-    return data;
-  });
+  const dataFetchingPromise = process.title === "browser" ? (
+    Promise.resolve(window.__PRELOADED_STATE__)
+  ) : (
+    Promise.all([
+      fetchFlickrAlbums()
+    ]).then(() => {
+      return data;
+    })
+  );
+  return dataFetchingPromise;
 };
 
 

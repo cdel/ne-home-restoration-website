@@ -2,7 +2,6 @@ import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
-import {createState} from '_serverUtils/createState';
 import {createLogger} from 'redux-logger';
 //import { syncHistoryWithStore } from 'react-router-redux';
 //import { browserHistory } from 'react-router';

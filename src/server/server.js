@@ -1,13 +1,14 @@
 import express from 'express';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {store} from '_store/server/store.js';
+import {configureStore} from '_store/client/store.js';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
-
+import {createState} from '_serverUtils/createState';
 import App from '_components/App';
 
 const PORT = process.env.PORT || 3001;
+let store;
 
 const app = express();
 // Tell our server to serve any static content in this directory
@@ -27,8 +28,11 @@ app.get('*', (req, res) => {
   res.send(renderFullPage(html, preloadedState));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port: ${PORT}...`);
+createState().then(state => {
+  store = configureStore(state);
+  app.listen(PORT, () => {
+    console.log(`Server running on port: ${PORT}...`);
+  });
 });
 
 function renderFullPage(html, preloadedState) {

@@ -15,7 +15,6 @@ const browserConfig = {
     /* Sets the entry point directory (All of our source files go into it) */
     context: path.resolve(__dirname, 'src/client'),
     entry: './js/main.js',
-    watch: isDevelopment,
     output: {
         filename: 'bundle.js',
         /* Sets the output point directory (All of our build files go into it) */
@@ -124,7 +123,7 @@ const serverConfig = {
     devtool: isDevelopment && "source-map",
     /* Sets the entry point directory (All of our source files go into it) */
     context: path.resolve(__dirname, 'src/server'),
-    entry: './serverUtils/createState.js',
+    entry: './server.js',
     target: "node",
     output: {
         filename: 'server.js',
@@ -163,6 +162,9 @@ const serverConfig = {
                 use: [
                     {
                         loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
                     }
                 ]
             },
