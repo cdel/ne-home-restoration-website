@@ -1,4 +1,4 @@
-import {fetchAlbumData} from '_serverApis/flickr';
+import {fetchAlbumData} from '_apis/flickr';
 import rawData from '_data/rawData';
 
 const data = {...rawData};

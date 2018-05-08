@@ -35,11 +35,10 @@ const browserConfig = {
             _selectors: path.resolve(__dirname, 'src/client/js/redux/selectors'),
             _store: path.resolve(__dirname, 'src/client/js/redux/store'),
             _data: path.resolve(__dirname, 'src/data'),
-            _utilities: path.resolve(__dirname, 'src/client/js/utilities'),
+            _utilities: path.resolve(__dirname, 'src/common/utilities'),
             _styles: path.resolve(__dirname, 'src/client/styles'),
             _assets: path.resolve(__dirname, 'src/client/assets'),
-            _serverUtils: path.resolve(__dirname, 'src/server/serverUtils'),
-            _serverApis: path.resolve(__dirname, 'src/server/apis')
+            _apis: path.resolve(__dirname, 'src/common/apis')
         },
         modules: [path.resolve(__dirname, "src/client/js"), "node_modules"]
     },
@@ -137,19 +136,18 @@ const serverConfig = {
         alias: {
             _components: path.resolve(__dirname, 'src/client/js/react/components'),
             _containers: path.resolve(__dirname, 'src/client/js/react/containers'),
-            _routes: path.resolve(__dirname, 'src/client/js/react/routes'),
             _actions: path.resolve(__dirname, 'src/client/js/redux/actions'),
             _reducers: path.resolve(__dirname, 'src/client/js/redux/reducers'),
+            _routes: path.resolve(__dirname, 'src/client/js/react/routes'),
             _constants: path.resolve(__dirname, 'src/client/js/constants'),
             _thunks: path.resolve(__dirname, 'src/client/js/redux/thunks'),
             _selectors: path.resolve(__dirname, 'src/client/js/redux/selectors'),
             _store: path.resolve(__dirname, 'src/client/js/redux/store'),
             _data: path.resolve(__dirname, 'src/data'),
-            _utilities: path.resolve(__dirname, 'src/client/js/utilities'),
+            _utilities: path.resolve(__dirname, 'src/common/utilities'),
             _styles: path.resolve(__dirname, 'src/client/styles'),
             _assets: path.resolve(__dirname, 'src/client/assets'),
-            _serverUtils: path.resolve(__dirname, 'src/server/serverUtils'),
-            _serverApis: path.resolve(__dirname, 'src/server/apis')
+            _apis: path.resolve(__dirname, 'src/common/apis')
         },
         modules: [path.resolve(__dirname, "src/client/js"), "node_modules"]
     },

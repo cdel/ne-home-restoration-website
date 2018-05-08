@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {configureStore} from '_store/client/store.js';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
-import {createState} from '_serverUtils/createState';
+import {createState} from '_utilities/createState';
 import App from '_components/App';
 
 const PORT = process.env.PORT || 3001;
