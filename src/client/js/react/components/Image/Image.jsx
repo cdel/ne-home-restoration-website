@@ -5,6 +5,13 @@ import './Image.scss';
 
 const noop = () => {};
 
+// @TODO: Add fullWidth fullHeight props
+// @TODO: center image by default!
+// @TODO: Add ref magic to have the image always fill the entire available width
+// @TODO: Find ways of using the known height and width to mantain the aspect ratio of image
+// even at loading state.
+
+
 class ImageComponent extends React.Component {
   constructor(props) {
     super(props);
