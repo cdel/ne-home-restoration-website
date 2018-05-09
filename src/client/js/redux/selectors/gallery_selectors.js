@@ -2,12 +2,12 @@ import { createSelector } from 'reselect';
 
 export const getAlbums = state => state.gallery.albums;
 export const getShowcase = state => state.gallery.showcase;
-export const getSlideshow = state => statel.gallery.slideshow;
+export const getSlideshow = state => state.gallery.slideshow;
 
 export const getShowcaseAlbum = createSelector(
   [getAlbums, getShowcase], 
   (albums, showcase) => {
-    return albums.find(album => album === showcase.albumId);
+    return albums.find(album => album.id === showcase.albumId);
 });
 
 export const getSlideshowAlbum = createSelector(

@@ -17,7 +17,7 @@ class ImageComponent extends React.Component {
     this.image = new Image();
     this.image.src = this.props.src;
     this.image.onload = () => {
-      this.setState({isLoading: false});
+      this.setState(prevState => ({isLoading: false}));
       console.log(`The dimensions for this image are height: ${this.image.height} and width ${this.image.width}`);
     };
   }
@@ -31,7 +31,7 @@ class ImageComponent extends React.Component {
         "ImageComponent--expand": expand
       })} onClick={onClick}>
         {!isLoading ? (
-          <img className="ImageComponent-img" src={src} alt={alt} style={styles}/>
+          <img className="ImageComponent-img" src={src} alt={alt}/>
         ) : (
           <div className="ImageComponent-loader" style={styles}/>
         )}

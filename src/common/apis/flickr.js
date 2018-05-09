@@ -46,7 +46,7 @@ export const fetchAlbumData = (albumId) => {
     return Promise.all(promises).then(photos => {
       return {
         title: data.data.photoset.title,
-        albumId,
+        id: albumId,
         photos
       };
     })

@@ -7,7 +7,8 @@ function mapStateToProps(state, containerProps) {
 
   return {
     about: state.about,
-    reviews: state.about.reviews
+    reviews: state.about.reviews,
+    flickrAssets: state.flickrAssets
   };
 }
 
