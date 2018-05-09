@@ -1,6 +1,7 @@
+import {connect} from 'react-redux';
 import {changeAlbum} from '_actions/gallery/gallery_actions';
 import galleryThunks from '_thunks/gallery/gallery_thunks';
-import {connect} from 'react-redux';
+import {getSlideshowAlbum, getSlideshowAlbums, getSlideshow} from '_selectors/gallery_selectors';
 import GalleryPage from '_components/GalleryPage/GalleryPage';
 
 // Get apps state and pass it as props to UserList
@@ -8,9 +9,9 @@ import GalleryPage from '_components/GalleryPage/GalleryPage';
 function mapStateToProps(state) {
   return {
     slideshow: {
-      album: state.gallery.albums.find(album => album.albumId === state.gallery.slideshow.albumId)
+      album: getSlideshowAlbum(state)
     },
-    albums: state.gallery.albums
+    albums: getSlideshowAlbums(state)
   }
 }
 

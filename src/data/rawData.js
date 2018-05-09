@@ -99,37 +99,36 @@ const state = {
   gallery: {
     title: "Showcasing our work",
     slideshow: {
-      albumId: "72157694152735684",
-      fetching: false,
-      fetched: false
+      activeAlbumId: "72157694152735684",
+      albumsToShow: ["72157665060259447", "72157667100192078", "72157665060525757", "72157694152735684", "72157665060914627"]
     },
-    stockPhotos: {
-      brandLogo: 'assets/mocks/stock_photo_171x180.png'
-    },
-    panoramic: {
-      name: "Panoramic",
-      photos: ["assets/showcase/bathroom_remodeling_ne_belmont-1.jpg", "assets/showcase/bathroom_remodeling_ne_belmont-2.jpg", "assets/showcase/kitchen_remodeling_ne_belmont-1.jpg", "assets/showcase/kitchen_remodeling_ne_belmont-2.jpg", "assets/showcase/livingroom_remodeling_ne_belmont-1.jpg"]
+    showcase: {
+      albumId: "72157668764515948"
     },
     albums: [
       {
+        name: "Showcase Work",
+        id: "72157668764515948"
+      },
+      {
         name: "Bathrooms",
-        albumId: "72157665060259447"
+        id: "72157665060259447"
       },
       {
         name: "Basements",
-        albumId: "72157667100192078"
+        id: "72157667100192078"
       },
       {
         name: "Kitchens",
-        albumId: "72157665060525757"
+        id: "72157665060525757"
       },
       {
         name: "Wood Work",
-        albumId: "72157694152735684"
+        id: "72157694152735684"
       },
       {
         name: "Exterior",
-        albumId: "72157665060914627"
+        id: "72157665060914627"
       }
     ]
   },

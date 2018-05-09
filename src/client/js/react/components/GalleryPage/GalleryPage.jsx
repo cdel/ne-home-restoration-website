@@ -19,7 +19,7 @@ class GalleryPage extends React.Component {
     return (
       <div>
         {albums.map(album => (
-          <button key={album.albumId} disabled={album.albumId === slideshow.album.albumId} onClick={this.handleAlbumChange(album.albumId)}>{album.title}</button>
+          <button key={album.id} disabled={album.id === slideshow.album.id} onClick={this.handleAlbumChange(album.id)}>{album.title}</button>
         ))}
         <Slideshow photos={slideshow.album.photos} />
       </div>

@@ -27,8 +27,8 @@ class Slideshow extends React.PureComponent {
   render() {
 
     const { activeIndex, isPreviewOpen, direction} = this.state;
-    const {photos, size, height} = this.props;
-    const activePhoto = photos[activeIndex][size] || photos[activeIndex];
+    const {photos, resolution, height} = this.props;
+    const activePhoto = photos[activeIndex][resolution] || photos[activeIndex];
 
     return (
       <div className="Slideshow">
@@ -40,7 +40,7 @@ class Slideshow extends React.PureComponent {
         >
         {photos.length ? (
           photos.map((photoData, index) => {
-            const photo = photoData[size] || photoData;
+            const photo = photoData[resolution] || photoData;
             return (
               <Carousel.Item key={`${photo.id}-${index}`} direction={direction}>
                 <div className="Slideshow-imageWrapper" onClick={this.togglePreview}>
@@ -72,7 +72,7 @@ class Slideshow extends React.PureComponent {
 }
 
 Slideshow.defaultProps = {
-  size: 'medium',
+  resolution: 'medium',
   height: 500,
   showIndicators: true,
   allowPreview: true,
@@ -80,7 +80,7 @@ Slideshow.defaultProps = {
 };
 
 Slideshow.propTypes = {
-  size: PropTypes.oneOf(['original', 'medium', 'small', 'large']),
+  resolution: PropTypes.oneOf(['original', 'medium', 'small', 'large']),
   showIndicators: PropTypes.bool,
   showCaption: PropTypes.bool,
   allowPreview: PropTypes.bool,

@@ -3,12 +3,11 @@ import {PageHeader, Grid, Col, Row} from 'react-bootstrap';
 import Card from '_components/Card/Card';
 import {Block} from '_components/Grid/Grid';
 import {SectionCard} from '_components/Page/Page';
-import Slideshow from '_components/Slideshow/Slideshow';
+import Showcase from '_container/Showcase/Showcase_container';
 import ContactForm from '_components/ContactForm/ContactForm';
 import CustomerReview from '_components/CustomerReview/CustomerReview'
 import ImageComponent from '_components/Image/Image';
 
-const showCaseHeight = 400;
 const ANDRE_PHOTO = 'assets/ne-home-restoration-owner.png';
 const brands = [
   {
@@ -48,10 +47,10 @@ const previews = [
 ];
 
 const HomePage = props => {
-  const {photos, about, stockPhotos, reviews} = props;
+  const {photos, about, showcasePhotos, reviews} = props;
   return (
     <div className="HomePage">
-      <Slideshow photos={photos} showCaption={false} height={showCaseHeight} />
+      <Showcase resolution="medium" showCaption={false}/>
       <SectionCard title="Our Story" textAlign="center" separated titleAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
