@@ -29,16 +29,19 @@ class ImageComponent extends React.Component {
   render() {
     const {withBorder, fullHeight, fullWidth, height, width, src, alt, onClick} = this.props;
     const {isLoading} = this.state;
-    const styles = width && height ? {width, height} : {};
+    const aspectRatio = width && height ? Math.min(height/width, width/height) : 1;
+    const styles = {paddingBottom: `${aspectRatio * 100}%`};
     return (
       <div className={cx("ImageComponent", {
         "ImageComponent--withBorder": withBorder,
         "ImageComponent--fullWidth": fullWidth,
         "ImageComponent--fullHeight": fullHeight
       })}>
-        <figure className="ImageComponent-container" onClick={onClick}>
-          <img className="ImageComponent-img" src={src} alt={alt}/>
-        </figure>
+        <div className="ImageComponent-wrapper" style={styles}>
+          <figure className="ImageComponent-container" onClick={onClick}>
+            <img className="ImageComponent-img" src={src} alt={alt}/>
+          </figure>
+        </div>
       </div>
     );
   }
