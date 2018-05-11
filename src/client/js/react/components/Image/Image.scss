@@ -2,33 +2,33 @@
 @import '~_styles/mixins/_global_mixins';
 
 .ImageComponent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  &-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
   &-img {
     width: 100%;
     height: auto;
   }
+  &--selfContained {
+    
+  }
   &--withBorder {
     border: 2px solid $brand-darkgrey;
   }
-  &-loader {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    &:after {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      content: 'Loading..';
+  &--fullWidth {
+    .ImageComponent-img {
+      width: 100%;
+      height: auto;
     }
   }
-  &--expand {
+  &--fullHeight {
     .ImageComponent-img {
       width: auto;
       height: 100%;

@@ -20,35 +20,33 @@ class ImageComponent extends React.Component {
     };
   }
   componentDidMount() {
-    console.log('Image component mounted!');
     this.image = new Image();
     this.image.src = this.props.src;
     this.image.onload = () => {
       this.setState(prevState => ({isLoading: false}));
-      console.log(`The dimensions for this image are height: ${this.image.height} and width ${this.image.width}`);
     };
   }
   render() {
-    const {withBorder, expand, height, width, src, alt, onClick} = this.props;
+    const {withBorder, fullHeight, fullWidth, height, width, src, alt, onClick} = this.props;
     const {isLoading} = this.state;
     const styles = width && height ? {width, height} : {};
     return (
-      <figure className={cx("ImageComponent", {
+      <div className={cx("ImageComponent", {
         "ImageComponent--withBorder": withBorder,
-        "ImageComponent--expand": expand
-      })} onClick={onClick}>
-        {!isLoading ? (
+        "ImageComponent--fullWidth": fullWidth,
+        "ImageComponent--fullHeight": fullHeight
+      })}>
+        <figure className="ImageComponent-container" onClick={onClick}>
           <img className="ImageComponent-img" src={src} alt={alt}/>
-        ) : (
-          <div className="ImageComponent-loader" style={styles}/>
-        )}
-      </figure>
+        </figure>
+      </div>
     );
   }
 }
 ImageComponent.propTypes = {
   withBorder: PropTypes.bool,
-  expand: PropTypes.bool,
+  fullWidth: PropTypes.bool,
+  fullHeight: PropTypes.bool,
   width: PropTypes.number,
   height: PropTypes.number,
   src: PropTypes.string.isRequired,
@@ -57,7 +55,8 @@ ImageComponent.propTypes = {
 };
 ImageComponent.defaultProps = {
   withBorder: false,
-  expand: false,
+  fullHeight: false,
+  fullWidth: false,
   height: null,
   width: null,
   alt: '',
