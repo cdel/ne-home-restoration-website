@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from '_utilities/classnames';
 import Image from '_components/Image/Image';
 import Lightbox from 'react-image-lightbox';
 import { Carousel } from 'react-bootstrap';
@@ -27,11 +28,13 @@ class Slideshow extends React.PureComponent {
   render() {
 
     const { activeIndex, isPreviewOpen, direction} = this.state;
-    const {photos, resolution, height, fullHeight, fullWidth} = this.props;
+    const {photos, resolution, height, fullHeight, fullWidth, isResponsive} = this.props;
     const activePhoto = photos[activeIndex][resolution] || photos[activeIndex];
 
     return (
-      <div className="Slideshow">
+      <div className={cx("Slideshow", {
+        "Slideshow--responsive": isResponsive
+      })}>
         <Carousel
           activeIndex={activeIndex}
           direction={direction}
@@ -78,7 +81,8 @@ Slideshow.defaultProps = {
   allowPreview: true,
   showCaption: true,
   fullHeight: false,
-  fullWidth: false
+  fullWidth: false,
+  isResponsive: false
 };
 
 Slideshow.propTypes = {
@@ -86,6 +90,7 @@ Slideshow.propTypes = {
   fullHeight: PropTypes.bool,
   resolution: PropTypes.oneOf(['original', 'medium', 'small', 'large']),
   showIndicators: PropTypes.bool,
+  isResponsive: PropTypes.bool,
   showCaption: PropTypes.bool,
   allowPreview: PropTypes.bool,
   height: PropTypes.number,

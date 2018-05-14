@@ -13,7 +13,7 @@ const HomePage = props => {
   const andre_photo = flickrAssets[about.owner.assetId];
   return (
     <div className="HomePage">
-      <Showcase resolution="large" showCaption={false} fullWidth/>
+      <Showcase resolution="large" showCaption={false} fullWidth isResponsive/>
       <SectionCard title="Our Story" textAlign="center" separated titleAlign="center" icon="glyphicon glyphicon-book">
         <Grid>
           <Row>
@@ -49,7 +49,7 @@ const HomePage = props => {
               <p style={{['marginBottom']: 16}}>{about.services.description}</p>
             </Col>
             {about.services.categories.map(category => (
-              <Col key={category.name} xs={6} md={3}>
+              <Col key={category.name} xs={12} sm={6} md={3}>
                 <Block mt={8} mb={8}>
                   <Card image={<ImageComponent fullHeight {...flickrAssets[category.assetId]} />} target="/gallery">
                     {category.name}
@@ -64,7 +64,7 @@ const HomePage = props => {
         <Grid>
           <Row>
             {reviews.map(review => (
-              <Col key={review.id} xs={6} md={3}>
+              <Col key={review.id} xs={12} sm={6} md={3}>
                 <CustomerReview  {...review}/>
               </Col>
             ))}
