@@ -27,7 +27,7 @@ class Slideshow extends React.PureComponent {
   render() {
 
     const { activeIndex, isPreviewOpen, direction} = this.state;
-    const {photos, resolution, height} = this.props;
+    const {photos, resolution, height, fullHeight, fullWidth} = this.props;
     const activePhoto = photos[activeIndex][resolution] || photos[activeIndex];
 
     return (
@@ -44,7 +44,7 @@ class Slideshow extends React.PureComponent {
             return (
               <Carousel.Item key={`${photo.id}-${index}`} direction={direction}>
                 <div className="Slideshow-imageWrapper" onClick={this.togglePreview}>
-                  <Image alt={photo.title} src={photo.src} height={photo.height} width={photo.width}/>
+                  <Image alt={photo.title} src={photo.src} height={photo.height} width={photo.width} fullHeight={fullHeight} fullWidth={fullWidth}/>
                 </div>
                 {this.props.showCaption && (
                   <Carousel.Caption>
@@ -76,10 +76,14 @@ Slideshow.defaultProps = {
   height: 500,
   showIndicators: true,
   allowPreview: true,
-  showCaption: true
+  showCaption: true,
+  fullHeight: false,
+  fullWidth: false
 };
 
 Slideshow.propTypes = {
+  fullWidth: PropTypes.bool,
+  fullHeight: PropTypes.bool,
   resolution: PropTypes.oneOf(['original', 'medium', 'small', 'large']),
   showIndicators: PropTypes.bool,
   showCaption: PropTypes.bool,

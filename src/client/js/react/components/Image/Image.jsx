@@ -29,19 +29,19 @@ class ImageComponent extends React.Component {
   render() {
     const {withBorder, fullHeight, fullWidth, height, width, src, alt, onClick} = this.props;
     const {isLoading} = this.state;
-    const aspectRatio = width && height ? Math.min(height/width, width/height) : 1;
-    const styles = {paddingBottom: `${aspectRatio * 100}%`};
+    const aspectRatio = width && height ? Math.min(height/width, width/height) : 0;
+    const styles = (aspectRatio && isLoading) ? {paddingBottom: `${aspectRatio * 100}%`} : {};
+    const Image = !isLoading ? <img className="ImageComponent-img" src={src} alt={alt}/> : <div className="ImageComponent-img"/>;
     return (
       <div className={cx("ImageComponent", {
         "ImageComponent--withBorder": withBorder,
         "ImageComponent--fullWidth": fullWidth,
-        "ImageComponent--fullHeight": fullHeight
+        "ImageComponent--fullHeight": fullHeight,
+        "ImageComponent--isLoading": isLoading
       })}>
-        <div className="ImageComponent-wrapper" style={styles}>
-          <figure className="ImageComponent-container" onClick={onClick}>
-            <img className="ImageComponent-img" src={src} alt={alt}/>
-          </figure>
-        </div>
+        <figure className="ImageComponent-wrapper" style={styles}>
+          {Image}
+        </figure>
       </div>
     );
   }
@@ -59,7 +59,7 @@ ImageComponent.propTypes = {
 ImageComponent.defaultProps = {
   withBorder: false,
   fullHeight: false,
-  fullWidth: false,
+  fullWidth: true,
   height: null,
   width: null,
   alt: '',

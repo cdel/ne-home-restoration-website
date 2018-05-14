@@ -6,19 +6,15 @@
   height: 100%;
   &-wrapper {
     position: relative;
-    height: 0;
-    padding-bottom: 100%;
-  }
-  &-container {
-    position: absolute;
-    top:0;
-    left:0;
+    display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
   }
   &-img {
-    width: 100%;
+    width: auto;
     height: auto;
   }
   &--withBorder {
@@ -34,6 +30,25 @@
     .ImageComponent-img {
       width: auto;
       height: 100%;
+    }
+  }
+  &--isLoading {
+    position: relative;
+    .ImageComponent-img {
+      height: 0;
+      width: 0;
+    }
+    .ImageComponent-wrapper {
+      display: block;
+      height: 0;
+      :after {
+        display: block;
+        position: absolute;
+        content: 'Loading..';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
