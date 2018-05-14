@@ -2,26 +2,52 @@
 @import '~_styles/mixins/_global_mixins';
 
 .ImageComponent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  &-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
   &-img {
-    flex-grow: 0;
-    max-height: 100%;
-    max-width: 100%;
+    width: auto;
+    height: auto;
   }
   &--withBorder {
     border: 2px solid $brand-darkgrey;
   }
-  &--expand {
+  &--fullWidth {
+    .ImageComponent-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &--fullHeight {
     .ImageComponent-img {
       width: auto;
       height: 100%;
-      max-width: none;
-      max-height: none;
+    }
+  }
+  &--isLoading {
+    position: relative;
+    .ImageComponent-img {
+      height: 0;
+      width: 0;
+    }
+    .ImageComponent-wrapper {
+      display: block;
+      height: 0;
+      :after {
+        display: block;
+        position: absolute;
+        content: 'Loading..';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

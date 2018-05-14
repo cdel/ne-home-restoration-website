@@ -66,7 +66,7 @@ class NavigationBar extends React.Component {
   render() {
     const props = this.props;
     const {isExpanded, height, isStickying} = this.state;
-    const styles = {height};
+    const styles = isStickying ? {height} : {};
     return (
       <header ref={this.getHeaderRef} className="Navbar" style={styles}>
         <div className="Navbar-banner" ref={this.getBannerRef}>

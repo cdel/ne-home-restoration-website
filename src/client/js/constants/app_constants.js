@@ -1,7 +1,5 @@
-export const apis = {
-  flickr: {
-    key: '067d073d001ed3cf049fb0dc97ab54c6'
-  },
+export const apiKeys = {
+  flickr: '067d073d001ed3cf049fb0dc97ab54c6'
 };
 export const icons = {
   facebook: 'assets/icons/facebook_icon.png',

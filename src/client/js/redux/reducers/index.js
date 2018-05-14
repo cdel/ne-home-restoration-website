@@ -8,6 +8,7 @@ import gallery from './gallery_reducer';
 import financing from './financing_reducer';
 import pages from './pages_reducer';
 import faq from './faq_reducer';
+import flickrAssets from './flickrAssets_reducer';
 /*
  * We combine all reducers into a single object before updated data is dispatched (sent) to store
  * Your entire applications state (store) is just whatever gets returned from all your reducers.
@@ -22,7 +23,8 @@ const allReducers = combineReducers({
     gallery,
     financing,
     faq,
-    pages
+    pages,
+    flickrAssets
 });
 
 export default allReducers;

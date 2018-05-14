@@ -1,3 +1,6 @@
+@import '~_styles/variables/_variables';
+@import '~_styles/mixins/_global_mixins';
+
 .Slideshow {
   background: black;
   border: 1px;
@@ -7,9 +10,27 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 500px;
     overflow: hidden;
   }
-  &.is-loading {
-    color: white;
+  &--responsive {
+    .Slideshow-imageWrapper {
+      height: 180px;
+    }
+    @include Breakpoint2($bp--small) {
+      .Slideshow-imageWrapper {
+        height: 220px;
+      }
+    }
+    @include Breakpoint2($bp--medium) {
+      .Slideshow-imageWrapper {
+        height: 300px;
+      }
+    }
+    @include Breakpoint2($bp--large) {
+      .Slideshow-imageWrapper {
+        height: 500px;
+      }
+    }
   }
 }

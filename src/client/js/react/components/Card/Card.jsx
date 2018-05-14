@@ -6,7 +6,7 @@ import cx from '_utilities/classnames';
 import './Card.scss';
 
 const Card = props => {
-  const {children, image, description, withoutBorder, target} = props;
+  const {children, image, withoutBorder, target} = props;
   const WrapperElement = target ? Link : 'div'
   const attributes = target ? {to: target} : {};
   return (
@@ -17,7 +17,7 @@ const Card = props => {
         {image}
       </div>
       <div className="Card-desc">
-        {description}
+        {children}
         <div className="Card-iconLink">
           <span className="glyphicon glyphicon-arrow-right"></span>
         </div>

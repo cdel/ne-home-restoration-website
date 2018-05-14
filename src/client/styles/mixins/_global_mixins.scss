@@ -12,6 +12,20 @@ $Breakpoint) {
 
 }
 
+@mixin Breakpoint2(
+
+  $Breakpoint: null
+  ) {
+
+@media screen and (min-width:
+$Breakpoint) {
+
+@content;
+
+}
+
+}
+
 @mixin reset_anchor_styles() {
   display: block;
   text-decoration: none;

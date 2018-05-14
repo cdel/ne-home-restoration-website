@@ -14,11 +14,56 @@ const state = {
   about: {
     owner: {
       name: "Andre LeBlanc",
-      background: "The owner, Andre LeBlanc, began developing his passion for carpentry and construction at age 14. He was employed every summer during high school for a licensed builder, honing his skill set in carpentry. He went on to receive a degree in Construction Management. After graduating college, Andre acquired his real estate license and spent a few years working in the industry so that he could develop a full understanding of the residential housing market.\n He enjoyed helping individuals with the process of purchasing or selling their homes. He knew he would be working in construction, and he continued to build the knowledge and skills to succeed from all angles. For several years, he worked as a lead carpenter for a company that focused on timber framing and historical restoration. In New England, a large percentage of homes, are built pre-1900, and this niche specialty is an integral part of what makes Andre’s background unique. Growing up in Vermont, on a family-run farm, Andre naturally wanted to get involved and understand how older houses and barns were constructed at that time. He enjoys working with reclaimed lumber and timber framed houses or barns when the opportunity arises. Andre has combined his unique experience, passion, and artistry together as one to form New England Home Restoration."
+      background: "The owner, Andre LeBlanc, began developing his passion for carpentry and construction at age 14. He was employed every summer during high school for a licensed builder, honing his skill set in carpentry. He went on to receive a degree in Construction Management. After graduating college, Andre acquired his real estate license and spent a few years working in the industry so that he could develop a full understanding of the residential housing market.\n He enjoyed helping individuals with the process of purchasing or selling their homes. He knew he would be working in construction, and he continued to build the knowledge and skills to succeed from all angles. For several years, he worked as a lead carpenter for a company that focused on timber framing and historical restoration. In New England, a large percentage of homes, are built pre-1900, and this niche specialty is an integral part of what makes Andre’s background unique. Growing up in Vermont, on a family-run farm, Andre naturally wanted to get involved and understand how older houses and barns were constructed at that time. He enjoys working with reclaimed lumber and timber framed houses or barns when the opportunity arises. Andre has combined his unique experience, passion, and artistry together as one to form New England Home Restoration.",
+      assetId: "40183215360"
     },
     company: {
       name: "New England Home Restoration",
       background: "Whether an entire home renovation, a kitchen or bath remodel, or adding a beautiful new addition to your residence, our clients choose New England Home Restoration for our expert craftsmanship and unrivaled customer service. Integrity is at our core, and we respect both our client’s time and expectations. We offer a truly custom approach, where we take the time to carefully assess our client's goals, and provide experienced feedback. Our team always prioritizes building trust, which is why most of our clients stay with us for a lifetime.\n New England Home Restoration combines a deep commitment to customer intimacy and collaboration throughout all phases of the relationship. With a background in hands-on carpentry and years of experience in construction management, owner Andre LeBlanc prides himself and his team on quality craftsmanship and is an expert in understanding the many steps required to complete a project."
+    },
+    services: {
+      title: "Our Work",
+      description: "Transforming an undecorated room into a stylish space, this is what we are specializing in. We can change every old, teary space in your house into a lavish sanctuary. We can guide you through the design process and help ensure the vision of your new space is achieved. Every room in your house will be made to feel like a comfortable, safe haven.",
+      categories: [
+        {
+          name: "Decks",
+          assetId: "28119002968"
+        },
+        {
+          name: "Basements",
+          assetId: "28119003028"
+        },
+        {
+          name: "Kitchens",
+          assetId: "40183781420"
+        },
+        {
+          assetId: "28119002998",
+          name: 'Bathrooms'
+        }
+      ]
+    },
+    materials: {
+      title: "Trusted Brands",
+      description: "We use only the highest quality materials in our projects",
+      brands: [
+        {
+          name: "BuildClean Dust Control HEPA",
+          assetId: "40183636900"
+        },
+        {
+          name: "Edgewood Brand",
+          assetId: "27121196847"
+        },
+        {
+          name: "Kohler Fixtures",
+          assetId: "40183636800"
+        },
+        {
+          name: "Wedi Remodeling Brand",
+          assetId: "27121196777"
+        }
+      ]
     },
     reviews: [
       {
@@ -99,38 +144,36 @@ const state = {
   gallery: {
     title: "Showcasing our work",
     slideshow: {
-      photos: [],
-      albumId: "72157694152735684",
-      fetching: false,
-      fetched: false
+      activeAlbumId: "72157694152735684",
+      albumsToShow: ["72157665060259447", "72157667100192078", "72157665060525757", "72157694152735684", "72157665060914627"]
     },
-    stockPhotos: {
-      brandLogo: 'assets/mocks/stock_photo_171x180.png'
-    },
-    panoramic: {
-      name: "Panoramic",
-      photos: ["assets/showcase/bathroom_remodeling_ne_belmont-1.jpg", "assets/showcase/bathroom_remodeling_ne_belmont-2.jpg", "assets/showcase/kitchen_remodeling_ne_belmont-1.jpg", "assets/showcase/kitchen_remodeling_ne_belmont-2.jpg", "assets/showcase/livingroom_remodeling_ne_belmont-1.jpg"]
+    showcase: {
+      albumId: "72157668764515948"
     },
     albums: [
       {
+        name: "Showcase Work",
+        id: "72157668764515948"
+      },
+      {
         name: "Bathrooms",
-        albumId: "72157665060259447"
+        id: "72157665060259447"
       },
       {
         name: "Basements",
-        albumId: "72157667100192078"
+        id: "72157667100192078"
       },
       {
         name: "Kitchens",
-        albumId: "72157665060525757"
+        id: "72157665060525757"
       },
       {
         name: "Wood Work",
-        albumId: "72157694152735684"
+        id: "72157694152735684"
       },
       {
         name: "Exterior",
-        albumId: "72157665060914627"
+        id: "72157665060914627"
       }
     ]
   },
@@ -202,6 +245,48 @@ const state = {
     {
       name: 'Financing',
       url: '/financing'
+    }
+  ],
+  flickrAssets: [
+    {
+      id: "40183215360",
+      name: "Andrew Photo"
+    },
+    {
+      name: "BuildClean Dust Control HEPA",
+      id: "40183636900"
+    },
+    {
+      name: "Edgewood Brand",
+      id: "27121196847"
+    },
+    {
+      name: "Kohler Fixtures",
+      id: "40183636800"
+    },
+    {
+      name: "Wedi Remodeling Brand",
+      id: "27121196777"
+    },
+    {
+      name: "Decks",
+      id: "28119002968"
+    },
+    {
+      name: "Basements",
+      id: "28119003028"
+    },
+    {
+      name: "Kitchens",
+      id: "40183781420"
+    },
+    {
+      id: "28119002998",
+      name: 'Bathrooms'
+    },
+    {
+      id: "41946547262",
+      name: "Failed to load"
     }
   ]
 };
