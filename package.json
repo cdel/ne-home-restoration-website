@@ -4,13 +4,13 @@
   "description": "The official website for New England Home Restoration, a home remodeling and restoration contractor based in the Boston area.",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "NODE_ENV=production webpack --config webpack.config.js && node dist/server/server.js",
+    "start": "SET NODE_ENV=production webpack --config webpack.config.js && node dist/server/server.js",
     "start-dev": "npm run watch && npm run server",
-    "build-dev": "NODE_ENV=development webpack --config webpack.config.js",
-    "build-prod": "NODE_ENV=production webpack --config webpack.config.js",
-    "server": "PORT=3001 && node dist/server/server.js",
-    "server-dev": "NODE_ENV=development webpack-dev-server --watch --config webpack.config.js",
-    "watch": "NODE_ENV=development webpack --watch --config webpack.config.js"
+    "build-dev": "SET NODE_ENV=development webpack --config webpack.config.js",
+    "build-prod": "SET NODE_ENV=production webpack --config webpack.config.js",
+    "server": "SET PORT=3001 && node dist/server/server.js",
+    "server-dev": "SET NODE_ENV=development webpack-dev-server --watch --config webpack.config.js",
+    "watch": "SET NODE_ENV=development webpack --watch --config webpack.config.js"
   },
   "repository": {
     "type": "git",
