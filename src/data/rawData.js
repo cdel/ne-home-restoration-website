@@ -144,7 +144,7 @@ const state = {
   gallery: {
     title: "Showcasing our work",
     slideshow: {
-      activeAlbumId: "72157694152735684",
+      activeAlbumId: "72157665060525757",
       albumsToShow: ["72157665060259447", "72157667100192078", "72157665060525757", "72157675303391157", "72157677461957488"]
     },
     showcase: {
