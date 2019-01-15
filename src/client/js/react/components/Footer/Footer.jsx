@@ -5,11 +5,11 @@ import {Grid, Row, Col} from 'react-bootstrap';
 import MediaAccounts from '_components/MediaAccounts/MediaAccounts';
 import './footer.scss';
 
-const Footer = props => {  
+const Footer = props => {
   return (
   <footer className="Footer page-footer font-small blue-grey lighten-5 pt-0">
     <div className="Footer-socialMediaBar">
-      <Grid> 
+      <Grid>
         <Row>
           <Col xs={12} md={10} className="Footer-column">
             <p className="Footer-socialMediaBar-message">
@@ -26,7 +26,7 @@ const Footer = props => {
       </Grid>
     </div>
     <div className="Footer-content">
-      <Grid> 
+      <Grid>
         <Row>
           <Col md={3} lg={4} xl={3} className="Footer-column">
             <h6 className="Footer-content-title">
@@ -39,7 +39,7 @@ const Footer = props => {
           <Col md={5} lg={4} xl={5} className="Footer-column">
             <h6 className="Footer-content-title">
               <span className="Footer-content-title-text">
-                Contanct Us
+                Contact Us
               </span>
             </h6>
             <ul className="Footer-contactList">
@@ -52,7 +52,7 @@ const Footer = props => {
                   <i className="glyphicon glyphicon-ok" aria-label="Phone Number"></i>
                   {license.name} {license.licenseId}
                 </li>
-              ))}  
+              ))}
             </ul>
           </Col>
           <Col md={4} lg={2} xl={2} className="Footer-column">
@@ -68,7 +68,7 @@ const Footer = props => {
                 </li>
               ))}
             </ul>
-          </Col>   
+          </Col>
         </Row>
       </Grid>
     </div>

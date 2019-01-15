@@ -40,7 +40,7 @@ const state = {
         {
           name: "Exterior Work",
           // assetId: "28119002968"  // Still valid deck picture
-          id: "40126328155"
+          assetId: "40126328155"
         }
       ]
     },
