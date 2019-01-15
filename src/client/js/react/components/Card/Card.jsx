@@ -32,8 +32,8 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  target: null,
-  withoutBorder: false
+  withoutBorder: false,
+  target: null
 };
 
 export default Card;

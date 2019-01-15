@@ -26,8 +26,8 @@ const state = {
       description: "Transforming an undecorated room into a stylish space, this is what we are specializing in. We can change every old, teary space in your house into a lavish sanctuary. We can guide you through the design process and help ensure the vision of your new space is achieved. Every room in your house will be made to feel like a comfortable, safe haven.",
       categories: [
         {
-          name: "Decks",
-          assetId: "28119002968"
+          name: 'Bathrooms',
+          assetId: "28119002998"
         },
         {
           name: "Basements",
@@ -38,8 +38,9 @@ const state = {
           assetId: "40183781420"
         },
         {
-          assetId: "28119002998",
-          name: 'Bathrooms'
+          name: "Exterior Work",
+          // assetId: "28119002968"  // Still valid deck picture
+          id: "40126328155"
         }
       ]
     },
@@ -145,7 +146,7 @@ const state = {
     title: "Showcasing our work",
     slideshow: {
       activeAlbumId: "72157665060525757",
-      albumsToShow: ["72157665060259447", "72157667100192078", "72157665060525757", "72157675303391157", "72157677461957488"]
+      albumsToShow: ["72157665060259447", "72157667100192078", "72157665060525757", "72157677461957488"]
     },
     showcase: {
       albumId: "72157668764515948"
@@ -168,12 +169,7 @@ const state = {
         id: "72157665060525757"
       },
       {
-        name: "Wood Work",
-        id: "72157675303391157"
-        // id: "72157694152735684"
-      },
-      {
-        name: "Exterior",
+        name: "Exterior Work",
         id: "72157677461957488"
         // id: "72157665060914627"
       }
@@ -271,8 +267,8 @@ const state = {
       id: "27121196777"
     },
     {
-      name: "Decks",
-      id: "28119002968"
+      name: 'Bathrooms',
+      id: "28119002998"
     },
     {
       name: "Basements",
@@ -283,8 +279,9 @@ const state = {
       id: "40183781420"
     },
     {
-      name: 'Bathrooms',
-      id: "28119002998"
+      name: "Exterior Work",
+      // id: "28119002968" // Still valid deck picture
+      id: "40126328155"
     },
     {
       name: "Failed to load",
